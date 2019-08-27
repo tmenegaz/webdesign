@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Rule set</title>
+	</head>
+	<body>
+		<h1>Básico do CSS</h1>
+		<a href="simplepage.html">Voltar</a>
+		<h1>Estilo para o HTML</h1>
+		<div style="padding: 10px; width: 680px; border-radius: 0.5em;border: 1px solid #000000; background: #00aeed;">
+			<div style="background: #dedede;border-radius: 0.5em; padding: 10px; border: 1px solid #000000;">
+				<h1>Mais de uma forma de usar o estilo</h1>
+				<p>As formas de estilizar as marcações do html podem ser divididas em 3 maneiras distintas:</p>
+				<ul>
+					<li>Folha de estilo externas: &lt;link rel="stylesheet" href="nomeArquivo.css"&gt;</li>
+					<li>Folha de estilo incorporada: &lt;style&gt; regra css&lt;/style&gt;</li>
+					<li>Folha de estilo inline: style="regra css; regra css; ...;"</li>
+				</ul>
+				<p>As folhas de estilos externas e incorporadas devem ficar em &lt;head&gt;&lt;/head&gt; e a folha de estilo inline deve ser posta no próprio elemento html sem colchetes ou seletores</p>
+				<p>É uma boa prática optar pela folha de estilo externa. Recomenda-se que a sua folha inicie com <strong>@charset "UTF-8";</strong> e com um comentário que a identifique: <strong>/* folha de estilo para produtos em mídias do tipo print */</strong></p>
+				<p>Utilize a propriedade <span style="font-style: italic;">title="NOME"</span> no elemento &lt;link&gt; para identificar a folha de estilo preferida</p>
+				<p>É também recomendado separar as folhas de estilo (com prudência: tente no máximo 3) para estilizar cada parte do seu site: layout, tipografia, formulário etc.</p>
+				<p>Caso quira oferecer folhas de estilo alternativas, utiliza <strong>rel="alternate stylesheet" title="NOME"</strong> (title é obrigatório nesse caso e deve ter o mesmo valor da folha de estilo preferida).</p>
+			</div>
+		</div>
+		<h1>Semiotica do CSS</h1>
+		<div style="padding: 10px; width: 680px; border-radius: 0.5em; border: 1px solid #000; background: #dedede; margin-bottom: 30px;">
+			<h1>seletor {propriedade: valor;}</h1>
+			<p>A propriedade é um <span style="font-style: italic;">estilo</span> que você aplica a um <strong>seletor</strong>: <strong>h1{border: 1px;}</strong></p>
+			<p>O <strong>valor</strong> do <span style="font-style: italic;">seletor h1</span> é 1px</p>
+			<p>Uma <span style="font-style: italic;">declaração</span> é um par de valores, isto é uma propriedade com mais de um valor: <strong>h1{border: 1px solid red;}</strong></p>
+			<p>Poderia ser, ainda, escrita em varias linhas com: <br>
+				<strong>h1{<br>
+				border: 1px;<br>
+				border-style: solid;<br>
+				border-color: red;<br>
+				}</strong>
+			</p>
+			<h2>Taquigrafia CSS</h2>
+			<p>É uma boa prática não inchar a folha de estilo com multiplas declarações. Para isso usa-se a <strong>taquigrafia CSS</strong> economizando tepo e tamanho de arquivo. A regra para a taquigrafia é simples e metafórica: começar às 12h o manterá longe de problemas.
+			Tenha em mente que a taquigrafia começa com o <strong>top</strong> para 12h; <strong>right</strong> para 3h; <strong>bottom</strong> para 6h e <strong>left</strong> para 9h.</p>
+			<p>Assim para o seletor padding, por exemplo, ao invés de declara assim:<br>
+				<strong>p{<br>
+				padding-top: 1.5px;<br>
+				padding-right: .5px;<br>
+				padding-bottom: 2px;<br>
+				padding-left: 0.3px;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{1.5px .5px 2px 0.3px;}</strong>
+			</p>
+			<p>É comum ter valores que sejam iguais, como top/bottom e right/left, portanto existem mais 3 padrôes de taquigrafia:
+				<br> <h3>para right e left iguais</h3>
+				<strong>p{<br>
+				padding-top: 1.5px;<br>
+				padding-right: .5px;<br>
+				padding-bottom: 2px;<br>
+				padding-left: .5px;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{1.5px .5px 2px;}</strong>
+				<br> <h3>para top/bottom iguais e right/left</h3>
+				<strong>p{<br>
+				padding-top: 1.5em;<br>
+				padding-right: .5em;<br>
+				padding-bottom: 1.5em;<br>
+				padding-left: .5em;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{1.5em .5em;}</strong>
+				<br> <h3>para todos os valores iguais</h3>
+				<strong>p{<br>
+				padding-top: .5%;<br>
+				padding-right: .5%;<br>
+				padding-bottom: .5%;<br>
+				padding-left: .5%;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{.5%;}</strong>
+			</p>
+		</div>
+		<h1>Efeito cascata, especificidade e herança</h1>
+		<div style="padding: 10px; width: 680px; border-radius: 0.5em;border: 1px solid #000000; background: #ff0000;">
+			<div style="background: #dedede;border-radius: 0.5em; padding: 10px; border: 1px solid #000000;">
+				<p>A folha de estilho pode vir de diferentes fontes na seguinte ordem <strong>ascendente</strong></p>
+				<ol>
+					<li>estilo do navegador (agente do usuário)</li>
+					<li>estilo do usuário</li>
+					<li>estilo do autor (nós os web dev's)</li>
+					<li>estilo do autor com a flag <strong>!important</strong></li>
+					<li>estilo do usuário com a flag <strong>!important</strong> (esse é o mais importante)</li>
+				</ol>
+				<h3>Calculo da especificidade</h3>
+				<p>Seguindo a cascata, as regras são ordenadas conforme a <span style="font-style: italic;">especificidade</span> que deve ser calculada <strong>quando 2 ou mais regras de estilo se aplicam ao mesmo elemento e definem a mesma propriedade, com a mesma importância, na mesma posição no efeito cascata</strong>, da seguinte forma:</p>
+				<p><ol>
+					<li>determinar um valor numérico para cada tipo de seletor</li>
+					<li>obter o total para a regra específica</li>
+					<li>quatro níveis são determinados com um peso para cada (a, b, c, d)</li>
+				</ol>
+				Mas, <span style="font-style: italic;">a, b, c, d</span> tem suas regras, a saber:
+				<ol type="a">
+					<li>estilo inline</li>
+					<li>o número total de seletores ID</li>
+					<li>o número de seletores de classe e atributo e pseudoclasses no seletor</li>
+					<li>o número de seletores de tipo e pseudo-elementos no seletor</li>
+				</ol>
+			</p>
+			<h3>Exemplo de especificidade e cálculo</h3>
+			<table style="border: 1px solid #000; border-collapse: collapse;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid #000;">Seletor</th>
+						<th style="border: 1px solid #000;">Especificidade <br> <span style="font-style: italic;">(a, b, c, d)</span></th>
+						<th style="border: 1px solid #000;">Total <br> <span style="font-style: italic;">(base 10)</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="border: 1px solid #000;">style="color:red;"</td>
+						<td style="border: 1px solid #000;">1,0,0,0</td>
+						<td style="border: 1px solid #000;">1000</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">#comments #respond {...}</td>
+						<td style="border: 1px solid #000;">0,2,0,0</td>
+						<td style="border: 1px solid #000;">200</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">#respod input[type="ckeckbox"] {...}</td>
+						<td style="border: 1px solid #000;">0,1,1,1</td>
+						<td style="border: 1px solid #000;">111</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">body #blog article.hentry p:first-child {...}</td>
+						<td style="border: 1px solid #000;">0,1,2,3</td>
+						<td style="border: 1px solid #000;">123</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">body #blog article[role="main"] p:first-child {...}</td>
+						<td style="border: 1px solid #000;">0,1,2,3</td>
+						<td style="border: 1px solid #000;">123</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">#comments {...}</td>
+						<td style="border: 1px solid #000;">0,1,0,0</td>
+						<td style="border: 1px solid #000;">100</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">p.auth .fn {...}</td>
+						<td style="border: 1px solid #000;">0,0,2,1</td>
+						<td style="border: 1px solid #000;">21</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">p.auth {...}</td>
+						<td style="border: 1px solid #000;">0,0,1,1</td>
+						<td style="border: 1px solid #000;">11</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">article p {...}</td>
+						<td style="border: 1px solid #000;">0,0,0,2</td>
+						<td style="border: 1px solid #000;">2</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">p {...}</td>
+						<td style="border: 1px solid #000;">0,0,0,1</td>
+						<td style="border: 1px solid #000;">1</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>Os totais iguais, <span style="font-style: italic;">123, </span>tem a mesma especificidade. Neste caso, o seletor que aparece depois na ordem de origem tem prioridade.</p>
+			<h3>Herança</h3>
+			<p>A herança permite que os <strong>autores</strong> escrevam uma propriedade e valor somente uma vez. Por exemplo:</p>
+			<h4>article, section, h1, h2, h3, h4, p, ol, ul, dl {font-family: georgia, serif}</h4>
+			<p>No entanto, é muito mais fácil escrever e manter a ssim:</p>
+			<h4>body {font-family: georgia, serif}</h4>
+		</div>
+	</div>
+</body>
+</html>

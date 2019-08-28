@@ -2,23 +2,23 @@
 /* Folha de estila base para definição de fundo */
 body{
 	margin: 10px;
-	padding: 10px;
+	padding: 15px;
 }
 
 .boxBody{
-	width: 83.7%;
-	padding: 10px;
+	width: 85%;
+	padding: 15px;
 	margin-bottom: 10px;
 }
 
 .boxModel {
 	margin: 10px;
-	padding: 10px;
-	width: 340px;
+	padding: 15px;
+	width: 350px;
 }
 
 #left{
-	padding: 10px;
+	padding: 15px;
 	margin-top: 10px;
 	position: absolute;
 	left: 0%;
@@ -26,29 +26,45 @@ body{
 }
 
 #center{
-	padding: 10px;
+	padding: 15px;
 	margin-top: 10px;
 	position: absolute;
-	left: 28%;
+	left: 29%;
 	height: 0px;
-}
-
-#bkg-att {
-	margin-left: 10px;
-	padding-right: 10px;
 }
 
 #in-bkg-att {
 	padding-top: .1px;
 	padding-left: 10px;
-	padding-bottom: .1;
+	padding-right: 0px;
+	padding-bottom: .1px;
 }
 
 
 #right {
-	padding: 10px;
+	padding: 15px;
 	margin-top: 10px;
 	position: absolute;
-	left: 56%;
-	
+	left: 58%;
+}
+
+#in-bkg-clip {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
+}
+
+#in-bkg-ori {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
+}
+
+#in-bkg-size {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
 }

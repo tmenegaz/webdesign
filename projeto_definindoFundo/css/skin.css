@@ -94,46 +94,83 @@ span {
 	background-image:
 		url('../img/black/sand_icon_16.png');
 	background-repeat: no-repeat;
-	background-position: 30% 50%;
+	background-position: 75% 50%;
 }
 
 #bkg-pos:hover {
 	background-image:
 		url('../img/black/sand_icon_16.png');
 	background-repeat: no-repeat;
-	background-position: 40% 50%;
-	background-size: 10%;
+	background-position: 80% 50%;
+	background-size: 5%;
 }
 
 #bkg-pos:active {
 	background-image:
 		url('../img/black/sand_icon_16.png');
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: 20%;
+	background-position: 85% 50%;
+	background-size: 10%;
 }
 
 #in-bkg-clip {
-	border-top: 1px dashed #000;
-	border-left: 1px solid #000;
-	border-right: 1px solid #000;
-	border-bottom: 1px dashed #000;
+	border: .5px dotted #000;
 	background-color: #00E171;
 	background-clip: border-box;
 }
 
 #in-bkg-clip:hover {
-	border: 1px dashed #000;
+	border: .5px dashed #000;
 	background-color: #039EB9;
 	background-clip: padding-box;
 }
 
 #in-bkg-clip:active {
-	border: thick double #000;;
+	border: .5px solid #000;
 	background-color: #02BF95;
 	background-clip: content-box;
 }
 
+#in-bkg-ori  {
+	border: .5px dotted #000;
+	background-color: #02BF95;
+	background-origin: border-box;
+}
+
+#in-bkg-ori:hover {
+	border: .5px dashed #000;
+	background-color: #039EB9;
+	background-origin: padding-box;
+}
+
+#in-bkg-ori:active {
+	border: .5px solid #000;
+	background-color: #00E171;
+	background-origin: content-box;
+}
+
+#in-bkg-size  {
+	background:
+		url('../img/black/sand_icon_16.png') no-repeat;
+	border: .5px dotted #000;
+	background-size: auto;
+	background-position: 80% 50%;
+}
+
+#in-bkg-size:hover {
+	background:
+		url('../img/black/sand_icon_16.png') no-repeat;
+	border: .5px solid #000;
+	background-size: contain;
+	background-position: 100% 50%;
+}
+
+#in-bkg-size:active {
+	background:
+		url('../img/black/sand_icon_16.png') no-repeat center;
+	border: .5px dashed #000;
+	background-size: cover;
+}
 
 /*
 #00E171

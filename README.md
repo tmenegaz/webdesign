@@ -9,7 +9,7 @@ Consulte o material utilizado para as aulas de [html5](https://github.com/tmeneg
 ## Projetos
 Cada projeto tem por objetivo utilizar o HTML5 com CSS3 para aprofundar uma abilidade para o desenvolvimento de sites.
  
- - [projeto_definindoFundo](https://github.com/tmenegaz/webdesign/blob/master/projeto_definindoFundo/html/index.html): trata da propriedade background para elementos de marcação
+ - [projeto_definindoFundo](https://github.com/tmenegaz/webdesign/tree/master/projeto_definindoFundo): trata da propriedade background para elementos de marcação
 
 
 

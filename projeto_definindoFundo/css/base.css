@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+/* Folha de estila base para definição de fundo */
+body{
+	margin: 10px;
+	padding: 10px;
+}
+
+.boxBody{
+	width: 83.7%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.boxModel {
+	margin: 10px;
+	padding: 10px;
+	width: 340px;
+}
+
+#left{
+	padding: 10px;
+	margin-top: 10px;
+	position: absolute;
+	left: 0%;
+	height: 0px;
+}
+
+#center{
+	padding: 10px;
+	margin-top: 10px;
+	position: absolute;
+	left: 28%;
+	height: 0px;
+}
+
+#bkg-att {
+	margin-left: 10px;
+	padding-right: 10px;
+}
+
+#in-bkg-att {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-bottom: .1;
+}
+
+
+#right {
+	padding: 10px;
+	margin-top: 10px;
+	position: absolute;
+	left: 56%;
+	
+}

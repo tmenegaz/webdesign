@@ -1,0 +1,148 @@
+@charset 'UTF-8';
+/* Folha de estila skin para definição de detalhes do estilo */
+
+body{
+	background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+	font-family: DejaVu Serif;
+	font-size: 1em;
+}
+
+a[href^="http"]{
+	background: url(../img/black/link_icon_16.png) 100% 50% no-repeat;
+	padding-right: 18px;
+}
+
+a:visited{
+	color: orange;
+}
+
+a:hover {
+	color: green;
+}
+
+span {
+	font-style: italic;
+}
+
+.boxBody{
+	background: #eaeaea;
+	border: 1px solid #000;
+}
+
+.boxModel {
+	border: 1px solid #000;
+	font-size: .78em;
+}
+
+.boxModel h3 + p {
+	text-decoration: underline;
+}
+
+#bkg:hover {
+	background: #00E171 /* color */
+	url('../img/black/sand_icon_16.png') /* image */
+	100% 80% /* position e size */  
+	repeat-y;
+}
+
+#bkg-img:hover {
+	background-image: url('../img/black/sand_icon_48.png'); /* image */
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#bkg-color {
+	background-color: #01D87A; 
+	/* background: linear-gradient(90deg, #01D87A 0%,#03A6B0 100% ); */
+}
+
+#bkg-color:hover {
+	background-color: #03A6B0;
+	/* background: linear-gradient(90deg, #03A6B0 0%,#01D87A 100% );  */
+}
+
+#bkg-rep {
+	background-image: url('../img/black/sand_icon_16.png');
+	background-repeat: repeat;
+}
+
+#bkg-rep:hover {
+	background-image: url('../img/black/sand_icon_16.png');
+	background-repeat: repeat-x;
+
+}
+
+#bkg-rep:active {
+	background-image: url('../img/black/sand_icon_16.png');
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+#bkg-att {
+	background-image: url('../img/black/sand_icon_16.png');
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+#in-bkg-att:hover {
+	background-image: url('../img/white/sand_icon_16.png');
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+#bkg-pos {
+	background-image:
+		url('../img/black/sand_icon_16.png');
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+}
+
+#bkg-pos:hover {
+	background-image:
+		url('../img/black/sand_icon_16.png');
+	background-repeat: no-repeat;
+	background-position: 40% 50%;
+	background-size: 10%;
+}
+
+#bkg-pos:active {
+	background-image:
+		url('../img/black/sand_icon_16.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 20%;
+}
+
+#in-bkg-clip {
+	border-top: 1px dashed #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px dashed #000;
+	background-color: #00E171;
+	background-clip: border-box;
+}
+
+#in-bkg-clip:hover {
+	border: 1px dashed #000;
+	background-color: #039EB9;
+	background-clip: padding-box;
+}
+
+#in-bkg-clip:active {
+	border: thick double #000;;
+	background-color: #02BF95;
+	background-clip: content-box;
+}
+
+
+/*
+#00E171
+#01D87A
+#01D083
+#01C88C
+#02BF95
+#02B79E
+#02AFA7
+#03A6B0
+#039EB9
+*/

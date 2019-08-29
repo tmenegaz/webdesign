@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+/* Folha de estilo base para box model */
+body {
+padding: 0;
+margin: 0;
+}
+.boxBody{
+width: 85%;
+padding: 15px;
+margin-bottom: 10px;
+}
+.boxModel {
+width: 470px;
+padding: 25px 0;
+padding-left: 20px;
+margin: 20px;
+}
+.boxModel-margin{
+	width: 400px;
+padding: 0px 25px;
+padding-bottom: 20px;
+}
+.boxModel-borda{
+	width: 355px;
+padding: 0px 20px;
+padding-bottom: 20px;
+}
+.boxModel-content{
+width: 320px;
+margin-top: 0;
+	margin-bottom: 0;
+padding: 0px 15px;
+padding-bottom: 20px;
+}
+.boxModel-margin > p{
+width: 250px;
+margin-top: 0;
+	margin-bottom: 0;
+padding: 10px 0;
+padding-left: 159px;
+}
+.boxModel-borda > p {
+width: 250px;
+margin-top: 0;
+	margin-bottom: 0;
+padding: 10px 0;
+padding-left: 130px;
+}
+.boxModel-content > p {
+width: 250px;
+margin-top: 0;
+	margin-bottom: 0;
+padding: 10px 0;
+padding-left: 75px;
+}

@@ -9,18 +9,21 @@ width: 85%;
 padding: 15px;
 margin-bottom: 10px;
 }
-.boxModel {
-width: 470px;
-padding: 25px 0;
-padding-left: 20px;
+.boxModel-margin {
+width: 466px;
+padding-top: 0px;
+padding-left: 25px;
+padding-right: 25px;
+padding-bottom: 25px;
 margin: 20px;
+margin-top: 0px;
 }
-.boxModel-margin{
-	width: 400px;
+.boxModel-borda{
+	width: 406px;
 padding: 0px 25px;
 padding-bottom: 20px;
 }
-.boxModel-borda{
+.boxModel-padding{
 	width: 355px;
 padding: 0px 20px;
 padding-bottom: 20px;
@@ -32,14 +35,23 @@ margin-top: 0;
 padding: 0px 15px;
 padding-bottom: 20px;
 }
+
 .boxModel-margin > p{
+width: 250px;
+margin-top: 0;
+	margin-bottom: 0;
+padding: 10px 0;
+padding-left: 179px;
+}
+
+.boxModel-borda > p{
 width: 250px;
 margin-top: 0;
 	margin-bottom: 0;
 padding: 10px 0;
 padding-left: 159px;
 }
-.boxModel-borda > p {
+.boxModel-padding > p {
 width: 250px;
 margin-top: 0;
 	margin-bottom: 0;

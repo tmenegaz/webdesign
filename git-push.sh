@@ -3,7 +3,7 @@
 ## a conta do github foi conectada ao repositório local da seguinte forma.
 ## no diretório rais do repositório, neste caso disciplina, faça:
 #git init
-#git remote add origin "https://github.com/<usuário-github>/webdesign"
+#git remote add origin https://github.com/<usuário-github>/webdesign
 
 git add .
 echo "Commite aqui"

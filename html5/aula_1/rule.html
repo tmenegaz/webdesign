@@ -85,6 +85,11 @@
 			<p>Essa forma de declaração para irmão adjacente é suficiente, na prática, quando se quer selecionar o irmão <strong>p</strong> de <strong>h1</strong>. Pense á respeito: se tivesse mais do que dois elementos <strong>p</strong> como irmãos adjacentes, então o que aconteceria com o primeiro elemento <strong>p</strong>?</p>
 			<hr>
 
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre h1~p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O CSS3 traz para o seletor o combinador de irmão geral com o signo (~). Para esse caso a regra diz que o segundo seletor não precisa seguir imediatamente o primeiro, no entando ambos devem ter o mesmo pai. O combinador de descendente irmão geral tem <strong>h1</strong> como irmão de <strong>h2</strong>.</p>
+			<hr>
+
+
 			<p>Observe, agora, o código abaixo para exemplos com o uso de pseudo-elementos<img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></p>
 
 			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p::first-line {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
@@ -92,16 +97,29 @@
 			<hr>
 
 			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p::first-latter {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
-			<p>É importante saber que o pseudo-elemento é aquele ue não existe como elemento no html. Observe que não existe semântica para marcar a primeira letra ou primeira linha com algum elemento que assim os define.</p>
+			<p>É importante saber que o pseudo-elemento é aquele que não existe como elemento no html. Observe que não existe semântica para marcar a primeira letra ou a primeira linha com algum elemento que assim os define.</p>
 			<p>Por outro lado, a pseudo-classe realmente se aplica a um elemento html. o first-child, por exemplo, selecina o elemento especificado como primeiro filho de seu elemento pai.</p>
 			<hr>
 
-			
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[rel] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Aqui tem-se um exemplo de seletor de atributo. A ideia é dar mais especificidade quando o que se quer é estilizar parte de um elemento.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[rel="imagem"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>É possível ampliar a especificidade para todas as imagens cujo o rel seja igual a imagem.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[rel~="data"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Imagine que o nosso rel, do trecho de código acima, tenha valores de atributos multiplos, então ele seria assim: <strong>rel="imagem data"</strong>. Nesse caso deve-se usar o sinal de til (~) que aponta para um valor de atributos específicos de uma lista de valores separados por espaços em branco.</p>
+			<hr>
+
+
+
 
 <!-- <article class="sobre">
 	<h1>Antônio Gaudí</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dictum dolor.</p>
-	<p>Lorem ipsum dolor <a href="https://via.placeholder.com/120" rel="imagem">imagem</a> sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dict</p>
+	<p>Lorem ipsum dolor <img src="https://via.placeholder.com/120/ff0000" title="imagem falsa com 120X120"> imagem sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dict</p>
 
 	<section class="projeto">
 		<h2 lang="es">La Casa Milà</h2>

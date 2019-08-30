@@ -6,5 +6,4 @@ git commit -m "$msn"
 git push origin master
 clear
 git log
-sleep 3
 clear

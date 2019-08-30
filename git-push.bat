@@ -1,4 +1,5 @@
 @echo off
+
 rem script para adicionar arquivos, commitar e subir a produção para a conta no github
 rem a conta do github foi conectada ao repositório local da seguinte forma.
 rem no diretório rais do repositório, neste caso disciplina, faça:

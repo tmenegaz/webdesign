@@ -13,6 +13,8 @@ Cada projeto tem por objetivo utilizar o HTML5 com CSS3 para aprofundar uma abil
 
  - [projeto_definindoFundo](https://github.com/tmenegaz/webdesign/tree/master/projeto_definindoFundo): trata da propriedade background para elementos de marcação;
 
+ - [projeto_targetPseudoClasse](https://github.com/tmenegaz/webdesign/tree/master/projeto_targetPseudoClasse): mostra a utilização da pseudo-classe :traget na navegação entre abas sem JavaScript;
+
  - [projeto_UIpSeudoClasses](https://github.com/tmenegaz/webdesign/tree/master/projeto_UIpSeudoClasses): mostra a utilização de pseudo-classe e seletor de atributo para substring;
 
 

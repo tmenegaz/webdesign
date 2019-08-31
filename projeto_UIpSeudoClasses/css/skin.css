@@ -1,7 +1,26 @@
 @charset 'UTF-8';
 /* Folha de estilo para skin do projeto UI */
 
+.box {
+	background: #f9fda2;
+}
+
+form {
+	background: #c2c2c2;
+}
+
+/* UI - abilitado ou desabilitado */
+
 input:disabled {
 	background: #999;
 	border: 1px solid #666;
+}
+
+input[type="checkbox"]:checked + label{
+	color: #fff;
+}
+
+input[type="text"]:enabled, input[type="password"]:enabled, input[type="submit"]:enabled{
+	border: 5px 7px solid #75aadb;
+	border-radius: 5px;
 }

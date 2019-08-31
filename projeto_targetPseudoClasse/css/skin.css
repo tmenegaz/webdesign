@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+/* Folha de estilo para skin do projeto UI */
+
+section {
+	background: #333;
+	color: #fff;
+	width: 100%;
+	min-height: 400px;
+}
+
+/* destaca quando é definido o estado ativo */
+a:target {
+	background: #f5f5f5;
+	font-weight: bold;
+}
+
+/* para não quebrar os paineis com aba, que não mais se alternam */
+#um:target ~ div > section#s-um,
+#dois:target ~ div > section#s-dois,
+#tres:target ~ div > section#s-tres,
+#quatro:target ~ div > section#s-quatro,
+section:first-of-type {
+	z-index: 2;
+}

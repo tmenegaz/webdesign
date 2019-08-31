@@ -113,11 +113,31 @@
 			<p>Imagine que o nosso rel, do trecho de código acima, tenha valores de atributos multiplos, então ele seria assim: <strong>rel="imagem data"</strong>. Nesse caso deve-se usar o sinal de til (~) que aponta para um valor de atributos específicos de uma lista de valores separados por espaços em branco.</p>
 			<hr>
 
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>span[lang|="en-GB"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Usa-se esse seletor de atributo para encontrar um valor igual a outro ou que tenha um separador com hífen (-).</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>img[src^="http"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O signo de circunflexo (^) quando relacionado com o seletor de substring significa <strong>"começa com".</strong> </p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>img[src$="jpg"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O signo de circunflexo ($) quando relacionado com o seletor de substring significa <strong>"termina com".</strong> </p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[href*="mdn"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O signo de circunflexo (*) quando relacionado com o seletor de substring significa <strong>"contém".</strong> </p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p, h2 {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>A combinação de seletores e feita separando cada seletor por vírgula.</strong> </p>
+			<hr>
+
 
 
 
 <!-- <article class="sobre">
-	<h1>Antônio Gaudí</h1>
+	<h1>Antoni Gaudí</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dictum dolor.</p>
 	<p>Lorem ipsum dolor <img src="https://via.placeholder.com/120/ff0000" title="imagem falsa com 120X120"> imagem sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dict</p>
 
@@ -128,9 +148,8 @@
 
 	<section class="projeto">
 		<h2 lang="es">La Sagrada Família</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, <em>most visited</em> turpis vel pretium vulputate.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, <span lang="en-GB">most visited</span> turpis vel pretium vulputate.</p>
 	</section>
-
 </article> -->
 
 

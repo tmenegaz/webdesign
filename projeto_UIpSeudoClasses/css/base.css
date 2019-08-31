@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+/* Folha de estilho para bases de UI */
+
+form {
+	display: block;
+	width: 200px;
+	padding: 10px;
+}
+
+input[name="login"]{
+	display: block;
+}

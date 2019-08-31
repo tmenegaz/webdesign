@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+/* Folha de estilo para skin do projeto UI */
+
+input:disabled {
+	background: #999;
+	border: 1px solid #666;
+}

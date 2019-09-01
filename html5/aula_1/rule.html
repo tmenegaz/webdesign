@@ -48,7 +48,7 @@
 			<h2>Selecionando elemento por contexto</h2>
 			<p>No <span style="font-style: italic;">CSS</span> é possível apontar elementos dependendo de seus ancestrais, pais ou filhos. Um ancestral é qualquer elemento que contenha o alvo desejado (o descendente), não importando o número de gerações que os separam.</p>
 
-			<p>Exemplo<img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></p>
+			<p>Exemplo <a href="./util/html_cod.html"><img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></a></p>
 			
 			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>article.sobre p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
 			<p>O espaço entre <strong>article.sobre</strong> e <strong>p</strong> significa que este seletor encontrará qualquer elemento <strong>p</strong> que seja descendente de <strong>article</strong> com a classe <strong>sobre</strong>, não importando a sua geração. Essa forma é mais específica do que o necessário, na prática.</p>
@@ -79,7 +79,7 @@
 			<p>Veja na imagem abaixo que <strong>h1</strong> e <strong>p</strong> são irmão adjacentes, assim como <strong>p</strong> e <strong>h2</strong>. Mas <strong>h1</strong> e <strong>h2</strong> não são irmãos adjacentes, pois, entre eles está o <strong>p</strong>.</p>
 			<p>Entretanto, são todos irmãos e também são filho de <strong>body</strong></p>
 
-			<p>Ilustração de pais, filhos, irmãos e irmãos adjacentes<img src="./img/html_cod_vazio.jpg" style="width: 691px; padding-top: 15px;"></p>
+			<p>Ilustração de pais, filhos, irmãos e irmãos adjacentes <a href="./util/html_cod_vazio.html"><img src="./img/html_cod_vazio.jpg" style="width: 691px; padding-top: 15px;"></a></p>
 
 			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre h1+p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
 			<p>Essa forma de declaração para irmão adjacente é suficiente, na prática, quando se quer selecionar o irmão <strong>p</strong> de <strong>h1</strong>. Pense á respeito: se tivesse mais do que dois elementos <strong>p</strong> como irmãos adjacentes, então o que aconteceria com o primeiro elemento <strong>p</strong>?</p>
@@ -90,7 +90,7 @@
 			<hr>
 
 
-			<p>Observe, agora, o código abaixo para exemplos com o uso de pseudo-elementos<img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></p>
+			<p>Observe, agora, o código abaixo para exemplos com o uso de pseudo-elementos<a href="./util/html_cod.html"><img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></a></p>
 
 			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p::first-line {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
 			<p>Essa forma de declaração (<strong>com a pseudo-elemento first-line</strong>) é suficiente, na prática, quando se quer selecionar apenas a primeira linha de cada elemento <strong>p</strong>. Conheça o <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/wbr">wbr</a> para indicar ao agente do usuário (browser), opcionalmente, quando poderá quebrar uma linnha.</p>
@@ -138,30 +138,6 @@
 			<h2>A pseudo-classe :target</h2>
 			<p>O CSS3 trouxe o :target para funcionar quando o elemento selecionado se torna o destino ativo do link. Isto é aplicado nos momentos em que você clica em um link que termina com um <strong>identificador de fragmento</strong> (a ou id), e, então o elemento ao qual o link se refere torna-se o :target</p>
 			<p><a href="https://github.com/tmenegaz/webdesign/tree/master/projeto_targetPseudoClasse">Veja esse exemplo com target</a> para entender melhor o processo <a href="../../projeto_targetPseudoClasse/html/target.html">ou nevegue no resultado aqui</a>.</p>
-
-
-
-
-<!-- <article class="sobre">
-	<h1>Antoni Gaudí</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dictum dolor.</p>
-	<p>Lorem ipsum dolor <img src="https://via.placeholder.com/120/ff0000" title="imagem falsa com 120X120"> imagem sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, turpis vel pretium vulputate, massa nibh dict</p>
-
-	<section class="projeto">
-		<h2 lang="es">La Casa Milà</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, <span lang="es">La Casa Milà</span>turpis vel pretium vulputate.</p>
-	</section>
-
-	<section class="projeto">
-		<h2 lang="es">La Sagrada Família</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum posuere posuere. Duis maximus, <span lang="en-GB">most visited</span> turpis vel pretium vulputate.</p>
-	</section>
-</article> -->
-
-
-
-
-
 
 			<h2>Taquigrafia CSS</h2>
 			<p>É uma boa prática não inchar a folha de estilo com multiplas declarações. Para isso usa-se a <strong>taquigrafia CSS</strong> economizando tepo e tamanho de arquivo. A regra para a taquigrafia é simples e metafórica: começar às 12h o manterá longe de problemas.

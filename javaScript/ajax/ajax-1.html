@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Ajax-01</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var objAjax
+	if (window.XMLHttpRequest) {
+		objAjax = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		objAjax = new ActiveXObject("Msxml2.XMLHTTP");
+		if (!objAjax) {
+			objAjax = new ActiveXObject("Microsoft.XMLHTTP");
+		} else {
+			alert("Lamento! Seu navegador não suporta assa aplicação");
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+/* Folha de estilo skin para layout */
+
+body {
+	background: #eaeaea;
+}
+
+.boxBody {
+	background: #edffff;
+}
+
+#estatica, #relativa, #absoluta, #fixa {
+	border: 1px solid #000;
+	background: #edffff;
+}
+
+.left-content, .right-content {
+	border: 1px solid #000;
+	background: #eaeaea;
+}
+
+.box-vertical p {
+	border: 1px solid #000;
+	background: #edffff;
+}
+
+.box-vertical h3 ~ p.box-position {
+	background: #c2c2c2;
+}
+

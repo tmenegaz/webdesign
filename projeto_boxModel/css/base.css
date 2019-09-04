@@ -65,3 +65,8 @@ margin-top: 0;
 padding: 10px 0;
 padding-left: 75px;
 }
+
+img {
+	display: block;
+	margin: 4px 0;
+}

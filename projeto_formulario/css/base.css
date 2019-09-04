@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+
+/* folha de estilopara base do projeto formulário */
+
+label {
+	display: block;
+}
+
+label[for='masculino'], label[for='feminino'], label[for='trans'] {
+	display: inline;
+}

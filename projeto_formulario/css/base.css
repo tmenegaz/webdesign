@@ -6,6 +6,8 @@ label {
 	display: block;
 }
 
-label[for='masculino'], label[for='feminino'], label[for='trans'] {
+label[for='masculino'], label[for='feminino'], label[for='trans'],
+label[for='teatro'], label[for='danca'], label[for='politica'],
+label[for='tecnologia'], label > textarea {
 	display: inline;
 }

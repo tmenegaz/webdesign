@@ -16,7 +16,7 @@
 
 		<div class="formulario">
 			<h1>Cadastro de pessoa física</h1>
-			<form>
+			<form method="post">
 				<label for="fnome">Primeiro nome
 					<input type="text" name="nome" id="fnome">
 				</label>
@@ -29,6 +29,7 @@
 				<label for="fone">Telefone celular
 					<input type="tel" name="fone" id="fone" pattern="/^\+?\d{2}?\s*\(\d{2}\)?\s*\d{4,5}\-?\d{4}$/g">
 				</label>
+				<label>Sexo:</label>
 				<label for="masculino">Marculino
 					<input type="radio" name="sexo" id="masculino">
 				</label>
@@ -38,6 +39,28 @@
 				<label for="trans">Trans
 					<input type="radio" name="sexo" id="trans">
 				</label>
+				<label>Interesses:</label>
+				<label for="teatro">Teatro
+					<input type="checkbox" name="teatro" id="teatro">
+				</label>
+				<label for="danca">Dança
+					<input type="checkbox" name="danca" id="danca">
+				</label>
+				<label for="politica">Política
+					<input type="checkbox" name="politica" id="politica">
+				</label>
+				<label for="tecnologia">Tecnologia
+					<input type="checkbox" name="tecnologia" id="tecnologia">
+				</label>
+				<label for="uf">Estado
+					<select id="uf">
+						<option>AC</option>
+						<option>BA</option>
+						<option>CE</option>
+					</select>
+				</label>
+				<label for="cv">Observações</label>
+				<textarea id="cv" name="curriculo" rows="10" cols="70"></textarea>
 				<label for="user">Nome do usuário
 					<input type="text" name="nuser" id="user">
 				</label>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" title="principal" href="../css/base.css">
+		<link rel="stylesheet" title="principal" href="../css/skin.css">
+		<title>Index - Projeto Box Model</title>
+	</head>
+	<body>
+		<div class="boxBody">
+			<h1>Olá turma de Web Design!</h1>
+			<p>Uma pequena instrodução aos elemetos HTML5 pode ser encontrada no <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">mdn.dev</a>. Consulte o <span>mdn</span> sempre que precisar!</p>
+			<h2>O Modelo Caixa</h2>
+			<p>O <strong>CSS</strong> trata sua página como se cada elemento contido nela estivesse dentro de uma caixa invisível.Imagine que pode ser um conjunto de varias caixa, uma dentro da outra, constituidas de elementos diferentes. De tentro para fora temos: área do conteudo; o espaço ao redor do conteúdo (padding); o limite exterior do padding (borda); o espaço invisível ao redor da borda e que separa um elemento do outro (margem). Outra imagem que ilustra o <strong>Modelo Caixa</strong> é o quadro na pareda. Umagine que a pintura é o conteúdo; o vidro é o padding; a moldura é a borda e a distância de um quadro a outro é a margem.</p>
+			<p>Nesse projeto vamos entender as propriedades que determinam um <strong>box model</strong>, são elas</p>
+			<ul>
+				<li>conteúdo com os <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">atribitos</a> width e hight</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a></li>
+				<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/border">border</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a></li>
+			</ul>
+		</div>
+		<p>Formas de utilização das propriedades </p>
+		<div class="boxModel-margin">
+			<p>margin</p>
+			<div class="boxModel-borda">
+				<p>borda</p>
+				<div class="boxModel-padding">
+					<p>padding</p>
+					<div class="boxModel-content">
+						<p>Conteúdo com W x H</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="boxBody">
+			<p>Crie um arquivo html com um parágrafo no body e aplique o css a fim de experimentar o modelo de caixa.</p>
+			<h2>W x H</h2>
+			<p> Para um certo elemento você pode definir a altura e a largura que será reservada para o conteúdo. Os elementos podem ser parágrafos, divs, títulos etc. como display: block ou display: inline-block (em linha com comportamento de bloco);. Exitem ainda, os elementos pharsing content (display: inline; por padrão), que não podem receber propriedades width e height.</p>
+			<p>O <strong>display</strong> determina o tipo de exibição natural para um elemento. O comportamento do "display: block;" permite determinar width, height, margin e paddding nos quatro lados. Enquanto que o "display: inline;" não permite width e height"</p>
+			<p>Veja no exemplo abaixo que o seletor strong não suporta width e height por ser inline:<img src="../img/inline_view.jpg" width="691px"></p>
+			<p>Veja no exemplo abaixo que o seletor h2 suporta width e height por ser block:<img src="../img/block_view.jpg" width="691px"></p>
+			<p>É importante saber que width pode ter seus valores em unidades de <strong>em, px ou porcentagem do elemento pai</strong>. Enquanto height pode ter apenas <strong>em e px</strong>.</p>
+
+			<p>O <strong>padding</strong> é o espaço a mais ao redor dos conteúdos de um elemento, mas dentro da borda. Você pode alterar a espessura do padding mas não a sua cor ou textura. No esntanto, <a href="../../projeto_definindoFundo/html/index.html">o background de um elemento</a> eparece na área do padding.</p>
+
+			<p>É possível criar uma <strong>borda</strong> ao redor ou em apenas um dos lados da caixa, configurar a espessura, estilo e cor.</p>
+
+			<p>A <strong>margem</strong> é a quantidade de espaço transparente entre um elemento e o próximo. Veja na imagem abaixo a combinação do width com a marrem para centralizar a imagem: <strong>"width: 500px; magin 10px auto;".</strong> Observe que a parte em amarelo é definida pelo agente do usuário (browser) com os mesmos valores máximos possíveis. <img src="../img/width_auto_view.jpg" width="691px"> Existe um conflito entre margens verticais. Se duas margens verticais se tocam, apenas a maregm maior será usada.</p>
+		</div>
+	</body>
+</html>

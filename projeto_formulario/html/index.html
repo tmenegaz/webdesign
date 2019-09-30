@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" title="principal" href="../css/base.css">
+	<link rel="stylesheet" title="principal" href="../css/skin.css">
+	<title>Index | Projeto Formulário</title>
+</head>
+<body>
+		<div class="boxBody">
+			<h1>Olá turma de Web Design!</h1>
+			<p>Uma pequena instrodução aos elemetos HTML5 pode ser encontrada no <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">mdn.dev</a>. Consulte o <span>mdn</span> sempre que precisar!</p>
+			<h2>Formúlário</h2>
+			<p></p>
+		</div>
+
+		<div class="formulario">
+			<h1>Cadastro de pessoa física</h1>
+			<form method="post">
+				<fieldset>
+					<legend>Formulário</legend>
+				<label for="fnome">Primeiro nome
+					<input type="text" name="nome" id="fnome">
+				</label>
+				<label for="snome">Sobrenome nome
+					<input type="text" name="sobrenome" id="snome">
+				</label>
+				<label for="email">E-mail
+					<input type="email" name="e-mail" id="email" pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i">
+				</label>
+				<label for="fone">Telefone celular
+					<input type="tel" name="fone" id="fone" pattern="/^\+?\d{2}?\s*\(\d{2}\)?\s*\d{4,5}\-?\d{4}$/g">
+				</label>
+				<label>Sexo:</label>
+				<label for="masculino">Marculino
+					<input type="radio" name="sexo" id="masculino">
+				</label>
+				<label for="feminino">Feminino
+					<input type="radio" name="sexo" id="feminino">
+				</label>
+				<label for="trans">Trans
+					<input type="radio" name="sexo" id="trans">
+				</label>
+				<label>Interesses:</label>
+				<label for="teatro">Teatro
+					<input type="checkbox" name="teatro" id="teatro">
+				</label>
+				<label for="danca">Dança
+					<input type="checkbox" name="danca" id="danca">
+				</label>
+				<label for="politica">Política
+					<input type="checkbox" name="politica" id="politica">
+				</label>
+				<label for="tecnologia">Tecnologia
+					<input type="checkbox" name="tecnologia" id="tecnologia">
+				</label>
+				<label for="uf">Estado
+					<select id="uf">
+						<option>AC</option>
+						<option>BA</option>
+						<option>CE</option>
+					</select>
+				</label>
+				<label for="cv">Observações</label>
+				<textarea id="cv" name="curriculo" rows="10" cols="70"></textarea>
+				<label for="user">Nome do usuário
+					<input type="text" name="nuser" id="user">
+				</label>
+				<label for="password">Senha
+					<input type="password" name="password" id="password">
+				</label>
+				<input type="submit" name="Cadastro" value="Cadastrar">
+			</fieldset>
+			</form>
+		</div>
+</body>
+</html>

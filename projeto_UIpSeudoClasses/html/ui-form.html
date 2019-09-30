@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>UI - Fomrulário</title>
+		<link rel="stylesheet" title="principal" href="../css/base.css">
+		<link rel="stylesheet" title="principal" href="../css/skin.css">
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="box">
+			<p>Formulário habilitado - enable</p>
+			<form action="../../html5/aula_1/rule.html#us">
+				<fieldset>
+					<legend>Login</legend>
+					<label for="uname">Username
+						<input type="text" name="uname" id="uname" placeholder="ex. email@email.com" anabled />
+					</label>
+					<label for="password">Password
+						<input type="password" name="password" id="password" anabled />
+					</label>
+					<input type="checkbox" name="rememberme" id="rememberme" anabled />
+					<label for="rememberme">Remember me</label>
+					<input type="submit" name="login" id="login" value="Login" anabled />
+				</fieldset>
+			</form>
+			<p>Formulário desabilitado - disable</p>
+			<form id="form-disabled" action="">
+				<fieldset>
+					<legend>Login</legend>
+					<label for="uname">Username
+						<input type="text" name="uname" id="uname" placeholder="ex. email@email.com" disabled />
+					</label>
+					<label for="password">Password
+						<input type="password" name="password" id="password" disabled />
+					</label>
+					<input type="checkbox" name="rememberme" id="rememberme" checked disabled />
+					<label for="rememberme">Remember me</label>
+					<input type="submit" name="login" id="login" value="Login" disabled />
+				</fieldset>
+			</form>
+		</div>
+		<p>Para voltar clique no botão <strong>Login</strong> de formulário Enable</p>
+	</body>
+</html>

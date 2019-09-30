@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Rule set</title>
+	</head>
+	<body>
+		<h1>Básico do CSS</h1>
+		<a href="simplepage.html">Voltar</a>
+		<h1>Estilo para o HTML</h1>
+		<div style="padding: 10px; width: 680px; border-radius: 0.5em;border: 1px solid #000000; background: #00aeed;">
+			<div style="background: #dedede;border-radius: 0.5em; padding: 10px; border: 1px solid #000000;">
+				<h1>Mais de uma forma de usar o estilo</h1>
+				<p>As formas de estilizar as marcações do html podem ser divididas em 3 maneiras distintas:</p>
+				<ul>
+					<li>Folha de estilo externas: &lt;link rel="stylesheet" href="nomeArquivo.css"&gt;</li>
+					<li>Folha de estilo incorporada: &lt;style&gt; regra css&lt;/style&gt;</li>
+					<li>Folha de estilo inline: style="regra css; regra css; ...;"</li>
+				</ul>
+				<p>As folhas de estilos externas são incorporadas e devem ficar em &lt;head&gt;&lt;/head&gt; e a folha de estilo inline deve ser posta no próprio elemento html sem colchetes ou seletores</p>
+				<p>É uma boa prática optar pela folha de estilo externa. Recomenda-se que a sua folha inicie com <strong>@charset "UTF-8";</strong> e com um comentário que a identifique: <strong>/* folha de estilo para produtos em mídias do tipo print */</strong></p>
+				<p>Utilize a propriedade <span style="font-style: italic;">title="NOME"</span> no elemento &lt;link&gt; para identificar a folha de estilo preferida</p>
+				<p>É também recomendado separar as folhas de estilo (com prudência: tente no máximo 5) para estilizar cada parte do seu site: layout, tipografia, formulário etc.</p>
+				<p>Caso queira oferecer folhas de estilo alternativas, utiliza <strong>rel="alternate stylesheet" title="NOME"</strong> (title é obrigatório nesse caso e deve ter o mesmo valor da folha de estilo preferida).</p>
+			</div>
+		</div>
+		<h1>Semiotica do CSS</h1>
+		<div style="padding: 10px; width: 680px; border-radius: 0.5em; border: 1px solid #000; background: #dedede; margin-bottom: 30px;">
+			<h1>seletor {propriedade: valor;}</h1>
+			<p>Um <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Seletores_CSS">seletor</a> determina em quais elementos uma regra de estilo é aplicada. Sendo assim, um seletor poderá ser definido com até cinco critério diferentes, a saber</p>
+			<ul>
+				<li>o tipo ou o nome do elemento html</li>
+				<li>o contexto no qual o elemento é encontrado</li>
+				<li>a <strong>class</strong> ou <strong>id</strong> de um elemento</li>
+				<li>a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> de um elemento ou <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a></li>
+				<li>se um elemento tem ou não um certo atributo e valor</li>
+			</ul>
+			<p>A propriedade é um <span style="font-style: italic;">estilo</span> que você aplica a um <strong>seletor (elemento html)</strong>: <strong>h1{border: 1px;}</strong></p>
+			<p>O <strong>valor</strong> do <span style="font-style: italic;">seletor h1</span> é 1px</p>
+			<p>Uma <span style="font-style: italic;">declaração</span> é um par de valores, isto é uma propriedade com mais de um valor: <strong>h1{border: 1px solid red;}</strong></p>
+			<p>Poderia ser, ainda, escrita em varias linhas com: <br>
+				<strong>h1{<br>
+				border: 1px;<br>
+				border-style: solid;<br>
+				border-color: red;<br>
+				}</strong>
+			</p>
+			<h2>Selecionando elemento por contexto</h2>
+			<p>No <span style="font-style: italic;">CSS</span> é possível apontar elementos dependendo de seus ancestrais, pais ou filhos. Um ancestral é qualquer elemento que contenha o alvo desejado (o descendente), não importando o número de gerações que os separam.</p>
+
+			<p>Exemplo <a href="./util/html_cod.html"><img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></a></p>
+			
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>article.sobre p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O espaço entre <strong>article.sobre</strong> e <strong>p</strong> significa que este seletor encontrará qualquer elemento <strong>p</strong> que seja descendente de <strong>article</strong> com a classe <strong>sobre</strong>, não importando a sua geração. Essa forma é mais específica do que o necessário, na prática.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Essa forma costuma ter a especificidade suficiente, na prática.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>article p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Essa forma tem pouca especificidade.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>article.sobre &gt; p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Esse seletor escolherá apenas aqueles elementos <strong>p</strong> que seja <strong>filhos</strong> do elemento <strong>article</strong> com a classe <strong>sobre</strong></p>
+			<hr>
+			
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre &gt; p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Essa forma de declaração é suficiente, na prática.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre &gt; p:first-child {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Essa forma de declaração (<strong>com a pseudo-classe first-child</strong>) é suficiente, na prática, quando se quer selecionar apenas o primeiro filho dentre os elementos <strong>p</strong>.</p>
+			<hr>
+
+			<p>Ainda com o tema contexto (de família), os elementos irmãos são elementos de qualquer tipo que sejam elementos filhos do mesmo pai.</p>
+			<p>Mas os <span style="font-style: italic;">irmãos adjacentes</span> são os elementos irmão que estão diretamente um ao lado do outro, sem nenhum outro irmão entre eles.</p>
+			<p>Veja na imagem abaixo que <strong>h1</strong> e <strong>p</strong> são irmão adjacentes, assim como <strong>p</strong> e <strong>h2</strong>. Mas <strong>h1</strong> e <strong>h2</strong> não são irmãos adjacentes, pois, entre eles está o <strong>p</strong>.</p>
+			<p>Entretanto, são todos irmãos e também são filho de <strong>body</strong></p>
+
+			<p>Ilustração de pais, filhos, irmãos e irmãos adjacentes <a href="./util/html_cod_vazio.html"><img src="./img/html_cod_vazio.jpg" style="width: 691px; padding-top: 15px;"></a></p>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre h1+p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Essa forma de declaração para irmão adjacente é suficiente, na prática, quando se quer selecionar o irmão <strong>p</strong> de <strong>h1</strong>. Pense á respeito: se tivesse mais do que dois elementos <strong>p</strong> como irmãos adjacentes, então o que aconteceria com o primeiro elemento <strong>p</strong>?</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>.sobre h1~p {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O CSS3 traz para o seletor o combinador de irmão geral com o signo (~). Para esse caso a regra diz que o segundo seletor não precisa seguir imediatamente o primeiro, no entando ambos devem ter o mesmo pai. O combinador de descendente irmão geral tem <strong>h1</strong> como irmão de <strong>h2</strong>.</p>
+			<hr>
+
+
+			<p>Observe, agora, o código abaixo para exemplos com o uso de pseudo-elementos<a href="./util/html_cod.html"><img src="./img/html_cod.jpg" style="width: 691px; padding-top: 15px;"></a></p>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p::first-line {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Essa forma de declaração (<strong>com a pseudo-elemento first-line</strong>) é suficiente, na prática, quando se quer selecionar apenas a primeira linha de cada elemento <strong>p</strong>. Conheça o <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/wbr">wbr</a> para indicar ao agente do usuário (browser), opcionalmente, quando poderá quebrar uma linnha.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p::first-latter {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>É importante saber que o pseudo-elemento é aquele que não existe como elemento no html. Observe que não existe semântica para marcar a primeira letra ou a primeira linha com algum elemento que assim os define.</p>
+			<p>Por outro lado, a pseudo-classe realmente se aplica a um elemento html. o first-child, por exemplo, selecina o elemento especificado como primeiro filho de seu elemento pai.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[rel] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Aqui tem-se um exemplo de seletor de atributo. A ideia é dar mais especificidade quando o que se quer é estilizar parte de um elemento.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[rel="imagem"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>É possível ampliar a especificidade para todas as imagens cujo o rel seja igual a imagem.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[rel~="data"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Imagine que o nosso rel, do trecho de código acima, tenha valores de atributos multiplos, então ele seria assim: <strong>rel="imagem data"</strong>. Nesse caso deve-se usar o sinal de til (~) que aponta para um valor de atributos específicos de uma lista de valores separados por espaços em branco.</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>span[lang|="en-GB"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>Usa-se esse seletor de atributo para encontrar um valor igual a outro ou que tenha um separador com hífen (-).</p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>img[src^="http"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O signo de circunflexo (^) quando relacionado com o seletor de substring significa <strong>"começa com".</strong> </p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>img[src$="jpg"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O signo de circunflexo ($) quando relacionado com o seletor de substring significa <strong>"termina com".</strong> </p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>a[href*="mdn"] {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>O signo de circunflexo (*) quando relacionado com o seletor de substring significa <strong>"contém".</strong> </p>
+			<hr>
+
+			<p class="code" style="border: 1px solid #000; padding: 10px; background: #efefef;"><strong>p, h2 {<br><span style="padding-left: 1.5em;">color: #ff0000;</span><br>}</strong></p>
+			<p>A combinação de seletores e feita separando cada seletor por vírgula.</strong> </p>
+			<hr>
+			<h2>UI - Users Inteface</h2>
+			<p>A <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">UI - Interface de Usuário</a> é o desenvolvimento de computadores, sistemas, aplicações, sites, blogs etc com foco na experiência do usuário.</p>
+			<p><a href="https://github.com/tmenegaz/webdesign/tree/master/projeto_UIpSeudoClasses">De uma olhada nesse exemplo com formulário</a> para ter uma amostra da utilização desse conceito com pseudo-classes de contexto e descendentes <a id="us" href="../../projeto_UIpSeudoClasses/html/ui-form.html">ou nevegue até lá para experimentar e ver o resultado</a>.</p>
+			<h2>A pseudo-classe :target</h2>
+			<p>O CSS3 trouxe o :target para funcionar quando o elemento selecionado se torna o destino ativo do link. Isto é aplicado nos momentos em que você clica em um link que termina com um <strong>identificador de fragmento</strong> (a ou id), e, então o elemento ao qual o link se refere torna-se o :target</p>
+			<p><a href="https://github.com/tmenegaz/webdesign/tree/master/projeto_targetPseudoClasse">Veja esse exemplo com target</a> para entender melhor o processo <a href="../../projeto_targetPseudoClasse/html/target.html">ou nevegue no resultado aqui</a>.</p>
+
+			<h2>Taquigrafia CSS</h2>
+			<p>É uma boa prática não inchar a folha de estilo com multiplas declarações. Para isso usa-se a <strong>taquigrafia CSS</strong> economizando tepo e tamanho de arquivo. A regra para a taquigrafia é simples e metafórica: começar às 12h o manterá longe de problemas.
+			Tenha em mente que a taquigrafia começa com o <strong>top</strong> para 12h; <strong>right</strong> para 3h; <strong>bottom</strong> para 6h e <strong>left</strong> para 9h.</p>
+			<p>Assim para o seletor padding, por exemplo, ao invés de declara assim:<br>
+				<strong>p{<br>
+				padding-top: 1.5px;<br>
+				padding-right: .5px;<br>
+				padding-bottom: 2px;<br>
+				padding-left: 0.3px;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{1.5px .5px 2px 0.3px;}</strong>
+			</p>
+			<p>É comum ter valores que sejam iguais, como top/bottom e right/left, portanto existem mais 3 padrôes de taquigrafia:
+				<br> <h3>para right e left iguais</h3>
+				<strong>p{<br>
+				padding-top: 1.5px;<br>
+				padding-right: .5px;<br>
+				padding-bottom: 2px;<br>
+				padding-left: .5px;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{1.5px .5px 2px;}</strong>
+				<br> <h3>para top/bottom iguais e right/left</h3>
+				<strong>p{<br>
+				padding-top: 1.5em;<br>
+				padding-right: .5em;<br>
+				padding-bottom: 1.5em;<br>
+				padding-left: .5em;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{1.5em .5em;}</strong>
+				<br> <h3>para todos os valores iguais</h3>
+				<strong>p{<br>
+				padding-top: .5%;<br>
+				padding-right: .5%;<br>
+				padding-bottom: .5%;<br>
+				padding-left: .5%;<br>
+				}</strong><br>
+				declara-se assim: <strong>padding{.5%;}</strong>
+			</p>
+		</div>
+		<h1>Efeito cascata, especificidade e herança</h1>
+		<div style="padding: 10px; width: 680px; border-radius: 0.5em;border: 1px solid #000000; background: #ff0000;">
+			<div style="background: #dedede;border-radius: 0.5em; padding: 10px; border: 1px solid #000000;">
+				<p>A folha de estilho pode vir de diferentes fontes na seguinte ordem <strong>ascendente</strong></p>
+				<ol>
+					<li>estilo do navegador (agente do usuário)</li>
+					<li>estilo do usuário</li>
+					<li>estilo do autor (nós os web dev's)</li>
+					<li>estilo do autor com a flag <strong>!important</strong></li>
+					<li>estilo do usuário com a flag <strong>!important</strong> (esse é o mais importante)</li>
+				</ol>
+				<h3>Calculo da especificidade</h3>
+				<p>Seguindo a cascata, as regras são ordenadas conforme a <span style="font-style: italic;">especificidade</span> que deve ser calculada <strong>quando 2 ou mais regras de estilo se aplicam ao mesmo elemento e definem a mesma propriedade, com a mesma importância, na mesma posição no efeito cascata</strong>, da seguinte forma:</p>
+				<p><ol>
+					<li>determinar um valor numérico para cada tipo de seletor</li>
+					<li>obter o total para a regra específica</li>
+					<li>quatro níveis são determinados com um peso para cada (a, b, c, d)</li>
+				</ol>
+				Mas, <span style="font-style: italic;">a, b, c, d</span> tem suas regras, a saber:
+				<ol type="a">
+					<li>estilo inline</li>
+					<li>o número total de seletores ID</li>
+					<li>o número de seletores de classe e atributo e pseudoclasses no seletor</li>
+					<li>o número de seletores de tipo e pseudo-elementos no seletor</li>
+				</ol>
+			</p>
+			<h3>Exemplo de especificidade e cálculo</h3>
+			<table style="border: 1px solid #000; border-collapse: collapse;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid #000;">Seletor</th>
+						<th style="border: 1px solid #000;">Especificidade <br> <span style="font-style: italic;">(a, b, c, d)</span></th>
+						<th style="border: 1px solid #000;">Total <br> <span style="font-style: italic;">(base 10)</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="border: 1px solid #000;">style="color:red;"</td>
+						<td style="border: 1px solid #000;">1,0,0,0</td>
+						<td style="border: 1px solid #000;">1000</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">#comments #respond {...}</td>
+						<td style="border: 1px solid #000;">0,2,0,0</td>
+						<td style="border: 1px solid #000;">200</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">#respod input[type="ckeckbox"] {...}</td>
+						<td style="border: 1px solid #000;">0,1,1,1</td>
+						<td style="border: 1px solid #000;">111</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">body #blog article.hentry p:first-child {...}</td>
+						<td style="border: 1px solid #000;">0,1,2,3</td>
+						<td style="border: 1px solid #000;">123</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">body #blog article[role="main"] p:first-child {...}</td>
+						<td style="border: 1px solid #000;">0,1,2,3</td>
+						<td style="border: 1px solid #000;">123</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">#comments {...}</td>
+						<td style="border: 1px solid #000;">0,1,0,0</td>
+						<td style="border: 1px solid #000;">100</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">p.auth .fn {...}</td>
+						<td style="border: 1px solid #000;">0,0,2,1</td>
+						<td style="border: 1px solid #000;">21</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">p.auth {...}</td>
+						<td style="border: 1px solid #000;">0,0,1,1</td>
+						<td style="border: 1px solid #000;">11</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">article p {...}</td>
+						<td style="border: 1px solid #000;">0,0,0,2</td>
+						<td style="border: 1px solid #000;">2</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000;">p {...}</td>
+						<td style="border: 1px solid #000;">0,0,0,1</td>
+						<td style="border: 1px solid #000;">1</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>Os totais iguais, <span style="font-style: italic;">123, </span>tem a mesma especificidade. Neste caso, o seletor que aparece depois na ordem de origem tem prioridade.</p>
+			<h3>Herança</h3>
+			<p>A herança permite que os <strong>autores</strong> escrevam uma propriedade e valor somente uma vez. Por exemplo:</p>
+			<h4>article, section, h1, h2, h3, h4, p, ol, ul, dl {font-family: georgia, serif}</h4>
+			<p>No entanto, é muito mais fácil escrever e manter a ssim:</p>
+			<h4>body {font-family: georgia, serif}</h4>
+		</div>
+	</div>
+</body>
+</html>

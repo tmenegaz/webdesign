@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>O Float</title>
+		<style>
+			body {
+		padding: 0 15px;
+		margin: 10px 0;
+		}
+		.boxBody{
+		width: 85%;
+		padding: 15px;
+		margin-bottom: 10px;
+		}
+			article, section {display: block;}
+			#apai {width: 680px; background: #817971; border: 1px solid #000; padding: 10px; margin-bottom: 10px;  overflow: auto;}
+			#sf1 {width: 270px; height: 270px; background: #069; margin: 10px; float: left;}
+			#sf2 {width: 270px; height: 270px; background: #076; margin: 10px; float: left;}
+			/* #sclear {clear: both;} */
+			#dpai {width: 660px; border: 5px solid #000; padding: 10px; overflow: auto;}
+			#dfilha1 {width: 200px; height: 200px; background: #069; margin: 10px; float: left;}
+			#dfilha2 {width: 200px; height: 200px; background: #076; margin: 10px; float: left;}
+			#dfilha3 {width: 200px; height: 200px; background: #004; margin: 10px; float: right;}
+			/* #dclear {clear: both;} */
+			img {float: left; border: 1px solid #000; margin: 0 10px 0 0;}
+			
+		</style>
+	</head>
+	<body>
+		<a href="simplepage.html">Voltar</a>
+		<div class="boxBody">
+			<h1>Olá turma de Web Design!</h1>
+			<p>Uma pequena instrodução aos elemetos HTML5 pode ser encontrada no <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">mdn.dev</a>. Consulte o <span>mdn</span> sempre que precisar!</p>
+			<h2>As caixas Flutuantes</h2>
+			<p>A <strong>caixa flutuante ( propriedade float)</strong> foi especificada para que os textos envolvessem as imagens. Um elemento que flutua está fora do fluno normal do documento e, portanto, não ocupa nenhum espaço. Com isso os elementos que não estão flutuando sobem, pois ignoram o elemento que flutua. Contudo, os elementos inline ou em linha abrem espaço para a caixa flutuante.</p>
+			<p>Usar float: left; em uma imagens com padrão width: auto; transforma-a em uma cixa block-level com as dimenssões de seu conteúdo. Um elemento pode flutuar para a esquerda ou direita ou nenhum ou ser heraddo. Se mais de um elemento consecutivo estiver flutuante eles se organizam um ao lado do outro até o fim do epaço e uma vez que não tenha mais espaço suficiente a flutuação cairá para o primeiro lugar com espaço.</p>
+		</div>
+		<article id="apai">Artigo Pai
+			<section id="sf1">Sessão Filha 1</section> <!-- /sf1 -->
+			<section id="sf2">Sessão Filha 2</section> <!-- /sf2 -->
+			<!-- <section id="sclear"></section> -->	<!-- /sclear -->
+			</article> <!-- /apai -->
+			<div id="dpai">
+				<div id="dfilha1"></div> <!-- /dfilha1 -->
+				<div id="dfilha2"></div> <!-- /dfilha2 -->
+				<div id="dfilha3"></div> <!-- /dfilha3 -->
+				<!-- <div id="dclear"></div> --> <!-- /dclear -->
+				</div> <!-- /dpai -->
+				<div><p>Float herança para imagem inline</p>
+					<p><img src="./img/logo_artigo.png" width="250"> Texto que acompanha  elemento flutuante. jndfvkjf kfjnkb dkfjn Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <strong>desse ponto em dinate o texto se encaixa abaixo da imagem</strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</body>
+		</html>

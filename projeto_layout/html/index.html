@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" title="principal" href="../css/base.css">
+		<link rel="stylesheet" title="principal" href="../css/skin.css">
+		<title>Index - Projeto Layout</title>
+	</head>
+	<body>
+		<div class="boxBody">
+			<h1>Olá turma de Web Design!</h1>
+			<p>Uma pequena instrodução aos elemetos HTML5 pode ser encontrada no <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">mdn.dev</a>. Consulte o <span>mdn</span> sempre que precisar!</p>
+			<h2>O posicionamento</h2>
+			<p>O fluxo normal das caixas é um block-level a abaixo do outro. Isso é devido ao esquema padrão de posicionamento: <strong>"position: static;"</strong>.</p>
+			<p>Ao todo são quatro esquemas de posicionamento: static; relative, absoluto e o fixed. Com a exceção de static é possível mover os outros tres nas direções para cima, para baixo, para a direita e para a esquerda. Vejamos cada um deles.</p>
+		</div>
+
+		<div id="estatica">
+			<h2>posição: estática</h2>
+			<div class="left-content box-vertical">
+				<h3>viewport</h3>
+				<p>block-lavel padrão anterior ao position: static;</p>
+				<p class="box-position">position: static;</p>
+				<p>bloco padrão no fluxo normal após position</p>
+			</div>
+			<div class="right-content box-vertical">
+				<h3>viewport</h3>
+				<p>o padrão de todo bloco é position:static;</p>
+				<p class="box-position">position: static;</p>
+				<p>position com top left etc não tem efeito</p>
+			</div>
+			<div class="clear"></div><!-- limpa o float -->
+		</div>
+		
+		<div id="relativa">
+			<h2>posição: relativa</h2>
+			<div class="left-content box-vertical">
+				<h3>viewport</h3>
+				<p>o comportamento é o  mesmo de um bloco estático</p>
+				<p class="box-position">position: relative;</p>
+				<p>serve como bloco de conteúdo para elemento absoluto</p>
+			</div>
+			<div class="right-content box-vertical">
+				<h3>viewport</h3>
+				<p>o espaço original é mantido após mover o bloco</p>
+				<p class="box-position " id="box-relative">position: relative;</p>
+				<p>pode ser movido com número negativo: top, left etc</p>
+			</div>
+			<div class="clear"></div><!-- limpa o float -->
+		</div>
+		<div id="absoluta">
+			<h2>posição: absoluta</h2>
+			<div class="left-content box-vertical">
+				<h3>viewport</h3>
+				<p>bloco é removido do fluxo</p>
+				<p class="box-position" id="box-absoluta-left">position: absolute;</p>
+				<p>se retrai até a largura do conteúdo</p>
+			</div>
+			<div class="right-content box-vertical">
+				<h3>viewport</h3>
+				<p>fica sobre outro elemento</p>
+				<p class="box-position" id="box-absoluta-right">position: absolute;</p>
+				<p>coloca-se em posição ao pai (html) ou ao seu bloco de conteúdo pai não estático </p>
+			</div>
+			<div class="clear"></div><!-- limpa o float -->
+		</div>
+		<div id="fixa">
+			<h2>posição: fixa</h2>
+			<div class="left-content box-vertical">
+				<h3>viewport</h3>
+				<p>funciona como o basoluto</p>
+				<p class="box-position" id="box-fixa-left">position: fixed;</p>
+				<p>sua referência é o vioport</p>
+			</div>
+			<div class="right-content box-vertical">
+				<h3>viewport</h3>
+				<p>não se move quando a página é rodada</p>
+				<p class="box-position" id="box-fixa-right">position: fixed;</p>
+				<p>pode se sobrepor a outro conteúdo e se retraír sem uma largura definida</p>
+			</div>
+			<div class="clear"></div><!-- limpa o float -->
+		</div>
+		<div class="clear"></div> <!-- limpa o float -->
+		
+	</body>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+/* Folha de estilho para bases de UI */
+
+.box {
+	width: 900px;
+	height: 260px;
+}
+
+.box, p {
+	padding: 2px 0 0 10px;
+}
+
+.box > p ~ p {
+	position: relative;
+	left: 445px;
+	top: -241.6px;
+}
+
+form{
+	display: block;
+	width: 400px;
+	height: 168.6px;
+	padding: 10px;
+	margin: 15px;
+}
+
+input[type="submit"] {
+	padding: 3px;
+}
+
+
+/* UI - abilitado ou desabilitado */
+
+#form-disabled{
+	position: relative;
+	left: 445px;
+	top: -241.6px;
+}
+
+input:not([type="checkbox"]) {
+	display: block;
+}
+
+input[type="checkbox"]:checked + label{
+	display: inline;
+}

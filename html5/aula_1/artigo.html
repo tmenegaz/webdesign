@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Artigo - (html5)</title>
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<style>
+			article, section, aside, footer, header, menu, nav, figure, figcaption, hgroup, details {display: block;}
+		</style>
+	</head>
+	<body>
+		<h1>Exemplo do uso da tag article</h1>
+		<a href="simplepage.html">Voltar</a>
+		<!-- início -->
+		<div id="tudo" style="background: #D3D3D3; border: 1px solid #000;  margin: 30px; width: 635px; height: 445px;">
+			<header id="header" style="background: #A9A9A9; border: 1px solid #000; margin: 10px 10px 0; height: 61px; padding: 10px;">
+				<div id="top-l" style="height: 60.333px;">
+					<a style="text-decoration: none; outline: none; color: #000;" href="#" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#000'"><img alt="logo_artigo" src="./img/logo_artigo.png" width="80" height="40">
+					<h1 style="font-size: 1em; margin: 0;">Ti&Rede</h1></a>		
+				</div>
+				<div style="position: relative; top: -56px; left: 370px;">
+					<form>
+					<label><img onmouseover="this.src='./img/zoom_icon_white_16.png'" onmouseout="this.src='./img/zoom_icon_16.png'" src="./img/zoom_icon_16.png" alt="zoom_icon_16"> <input style="width: 182px" type="text"></label>
+					</form>
+					<img onmouseover="this.src='./img/user_icon_white_16.png'" onmouseout="this.src='./img/user_icon_16.png'" style="padding-top: 10px; position: relative; left: 203px;" src="./img/user_icon_16.png" alt="user_icon">
+				</div>
+			</header>
+			<!-- /header - sem sessão -->
+			<nav style="/* background: #A9A9A9; border: 1px solid #000; */ margin: 10px 10px 0; padding: 10px; position: relative; left: 110px; width: 360px; top: -64px; height: 38px;">
+				<ul style="list-style-type: none; padding: 0;">
+					<li style="display: inline;"><a style="outline: none;" href="#">Home</a></li>
+					<li style="display: inline;"><a style="outline: none;" href="#">Portifólio</a></li>
+					<li style="display: inline;"><a style="outline: none;" href="#">Produtos</a></li>
+					<li style="display: inline;"><a style="outline: none;" href="#">Serviços</a></li>
+					<li style="display: inline;"><a style="outline: none;" href="#">Contato</a></li>
+				</ul>
+			</nav>
+			<!-- /nav -->
+			<div id="content" style="background: #A9A9A9; border: 1px solid #000; margin: 10px; display: inline-flex; height: 254px; width: 593px; padding: 10px; position: relative; top: -70px">Conteúdo principal
+				<article style="background: #D3D3D3; border: 1px solid #000;  margin: 30px 10px; width: 233px; position: absolute; padding: 10px;">Coluna principal do artigo
+					<header>
+						<h1 style="background: #A9A9A9; border: 1px solid #000; margin: 10px;">Título do artigo</h1>
+						<p style="background: #A9A9A9; border: 1px solid #000; margin: 10px;">Metadados do artigo</p>
+					</header>
+					<p style="background: #A9A9A9; border: 1px solid #000; margin: 10px; padding-bottom: 20px;">Conteúdo do artigo ...</p>
+				<footer style="background: #A9A9A9; border: 1px solid #000; margin: 10px;">Rodapé do artigo</footer>
+			</article>
+			<!-- /article - conteúdo principal do artigo -->
+			<aside id="sidebar" style="background: #D3D3D3; border: 1px solid #000; position: relative; top: 30px; left: 124px; height: 102px; padding: 10px; margin-left: 30px"> Coluna lateral
+				<h3 style="background: #A9A9A9; border: 1px solid #000; margin: 10px;">Título da barra lateral</h3>
+				<p style="background: #A9A9A9; border: 1px solid #000; margin: 10px;">Conteúdo da barra lateral</p>
+			</aside>
+			<!-- /aside - segundo conteúdo. fica ao lado do conteúdo principal da página -->
+		</div>
+		<!-- /div - para css e sem sessão -->
+		<footer id="footer" style="background: #A9A9A9; border: 1px solid #000; margin: 0 10px 10px; padding: 10px; position: relative; top: -70px">
+			Rodapé da página
+		</footer>
+		<!-- /footer - rodapé da página -->
+	</div>
+	<!-- /fim -->
+</body>
+</html>

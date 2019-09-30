@@ -1,0 +1,70 @@
+@charset 'UTF-8';
+/* Folha de estila base para definição de fundo */
+body{
+	margin: 10px;
+	padding: 15px;
+}
+
+.boxBody{
+	width: 85%;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+.boxModel {
+	margin: 10px;
+	padding: 15px;
+	width: 350px;
+}
+
+#left{
+	padding: 15px;
+	margin-top: 10px;
+	position: absolute;
+	left: 0%;
+	height: 0px;
+}
+
+#center{
+	padding: 15px;
+	margin-top: 10px;
+	position: absolute;
+	left: 29%;
+	height: 0px;
+}
+
+#in-bkg-att {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
+}
+
+
+#right {
+	padding: 15px;
+	margin-top: 10px;
+	position: absolute;
+	left: 58%;
+}
+
+#in-bkg-clip {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
+}
+
+#in-bkg-ori {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
+}
+
+#in-bkg-size {
+	padding-top: .1px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: .1px;
+}

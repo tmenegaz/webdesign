@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+/* Folha de estilo base para artigo */
+
+article, section, aside,
+footer, header, menu, nav,
+figure, figcaption, hgroup,
+details {
+	display: block;
+}
+
+#tudo {
+	background: #D3D3D3;
+	border: 1px solid #000;
+	margin: 30px;
+	width: 635px;
+	height: 445px;
+}
+
+#header {
+	background: #A9A9A9;
+	border: 1px solid #000;
+	margin: 10px 10px 0;
+	height: 61px;
+	padding: 10px;
+}
+
+#top-logo {
+	height: 60.333px;
+}

@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+/* Folha de estilo skin para simple site */
+body{
+	background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+	font-family: DejaVu Serif;
+	font-size: 1em;
+}

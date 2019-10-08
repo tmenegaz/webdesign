@@ -12,3 +12,8 @@
 	background: #eaeaea;
 	padding: 10px;
 }
+
+#nav-atividade ul li {
+	display: inline;
+	padding: 10px;
+}

@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* Folha de estilo base para grid */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    display: grid;
+
+    grid-gap: 5px;
+    grid-template-areas: "top top top"
+    "nav nav nav"
+    "side main aside"
+    "footer footer footer"; /* para obter um espaço vazio use o . */
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 13.9vh 13.9vh 60vh;
+}
+.top-page {
+    height: 90px;
+    padding: 10px;
+
+    grid-area: top;
+    /* atalho */
+    /* grid-column: 1/4; */
+
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+.nav-page {
+    height: 90px;
+    padding: 10px;
+
+    grid-area: nav;
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+.side-page {
+    /* height: 90px; */
+    padding: 10px;
+
+    grid-area: side;
+    /* modo verboso */
+    /* grid-column-end: 2;
+    grid-column-start: 1; */
+}
+.main-page {
+    /* height: 90px; */
+    padding: 10px;
+
+    grid-area: main;
+    /* modo verboso */
+    /* grid-column-end: 3;
+    grid-column-start: 2; */
+}
+.aside-page {
+    /* height: 90px; */
+    padding: 10px;
+
+    grid-area: aside;
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 3; */
+}
+.footer-page {
+    height: 90px;
+    padding: 10px;
+
+    grid-area: footer;
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+.footer-page a {
+    padding: 10px;
+}
+
+.main-page h1 {
+    padding-left: 10px;
+}
+
+.main-page {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#properties {
+    display: grid;
+    width: 100%;
+    height: 83%;
+    /* para os itens */
+    /* align-items: center; */
+    /* para content */
+    /* align-content: center; */
+
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 10px 10px 10px; */
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 10px 10px 10px; */
+    /* para content */
+    /* justify-content: center; */
+    /* para os itens */
+    /* justify-items: center; */
+}
+#properties > div {
+    width: 50%;
+    height: 50%;
+    /* generico */
+
+    align-self: center;
+    justify-self: center;
+}
+.center {
+    /* align-self: end; */
+    /* justify-self: end; */
+}

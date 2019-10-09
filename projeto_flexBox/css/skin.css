@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* Folha de estilo skin para flexbox */
+/* cores: #B0C4DE #00BFFF #87CEEB #ADD8E6 */
+body {
+    font-family: DejaVu Serif;
+    font-size: 1em;
+}
+
+#content {
+    background: #add8e6;
+}
+.item {
+    color: #fff;
+    border-radius: 5% 10px;
+    background: #b0c4de;
+    box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .24);
+}

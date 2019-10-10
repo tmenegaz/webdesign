@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* Folha de estilo base para nav */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* grid */
+
+#container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-areas: "top top"
+    "nav nav"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 10fr 10fr 80fr;
+}
+#top-page {
+    height: 90px;
+
+    grid-area: top;
+}
+.nav-page {
+    height: 90px;
+
+    grid-area: nav;
+}
+
+#main-page {
+    grid-area: main;
+}
+#aside-page {
+    grid-area: aside;
+}
+#footer-page {
+    height: 90px;
+
+    grid-area: footer;
+}
+#footer-page a {
+    padding: 10px;
+}
+
+/* flexbox top */
+
+.flex-top-content {
+    display: flex;
+    flex-direction: row; /* row é a padrão e tem ainda colum, row-reverse e colum-reverse */
+
+    align-content: flex-start; /* flex-start é o padrão e tem flex-end, center, strech, space-between e space-araund */
+    align-items: flex-start; /* flex-start é o padrão e tem flex-end, center, strech e baseline */
+    flex-wrap: no-wrap; /* no-wrap é o padrão e tem wrap e wrap-reverse */
+    justify-content: flex-start; /* flex-start é o padrão e tem flex-end, space-between e space-araund */
+}
+
+.top-item {
+    padding: 5px;
+    margin: 10px;
+
+    flex-basis: auto; /* define a largura de cada elemeto caso não tenha */
+    flex-grow: 0; /* ocupa o resto da largura da div */
+    flex-shrink: 1; /* encolhe a div */
+}
+
+
+.top-item:nth-child(1) {
+    /* flex-grow: 1; */
+    order: 2; /* odena os filhos controlando qual será o elemento filho */
+}
+.top-item:nth-child(2) {
+    order: 1;
+}
+
+/* flexbox nav */
+.flex-nav-top {
+    display: flex;
+
+    justify-content: space-around;
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* Folha de estilo skin para nav */
+/* cores: #B0C4DE #00BFFF #87CEEB #ADD8E6 */
+body {
+    font-family: DejaVu Serif;
+    font-size: 1em;
+}
+
+#top-page {
+    background: yellow;
+}
+.nav-page {
+    background: blue;
+}
+.nav-page ul li a {
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.nav-page ul li a:hover {
+    color: blue;
+    background: #fff;
+}
+.nav-page ul li {
+    list-style-type: none;
+}
+#main-page {
+    background: red;
+}
+#aside-page {
+    background: green;
+}
+#footer-page {
+    color: #fff;
+    background: black;
+}
+#footer-page a {
+    color: #fff;
+}
+
+#properties {
+    background: black;
+}
+
+#container {
+    background: #add8e6;
+}
+.top-item {
+    color: #fff;
+    border-radius: 5% 10px;
+    background: #b0c4de;
+    box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .24);
+}

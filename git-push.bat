@@ -9,6 +9,7 @@ rem git remote add origin https://github.com/<usuário-github>/webdesign
 git add .
 set /p msn=Commite aqui: 
 git commit -m "%msn%"
+git pull origin master
 git push origin master
 cls
 rem descomente as duas linhas abaixo se quiser ver o resultado do commit e limpar a tela

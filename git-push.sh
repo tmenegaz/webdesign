@@ -9,6 +9,7 @@ git add .
 echo "Commite aqui"
 read msn
 git commit -m "$msn"
+git pull origin master
 git push origin master
 clear
 ## descomente as duas linhas abaixo se quiser ver o resultado do commit e limpar a tela

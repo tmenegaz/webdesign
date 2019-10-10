@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+/* Folha de estilo skin para simple site */
+/* cores para background: .2CC38B .2AB785 .27AB7F */
+body{
+	background: #34e89e;
+	font-family: DejaVu Serif;
+	font-size: 1em;
+}
+p {
+background: #2AB785;
+border: 1px solid black;
+color: #fff;
+}
+
+h1 {
+background: #fff;
+}
+
+.col-left, .col-center, .col-right {
+background-color: #ccc;
+}

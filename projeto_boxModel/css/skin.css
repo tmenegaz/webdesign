@@ -1,69 +1,55 @@
 @charset 'UTF-8';
 /* Folha de estilo skin para box model */
 body{
-	background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
-	font-family: DejaVu Serif;
-	font-size: 1em;
+background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+font-family: DejaVu Serif;
+font-size: 1em;
 }
-
 a[href^="http"]{
-	background: url(../img/black/link_icon_16.png) 100% 50% no-repeat;
-	padding-right: 18px;
+background: url(../img/black/link_icon_16.png) 100% 50% no-repeat;
 }
-
 a:visited{
-	color: orange;
+color: orange;
 }
-
 a:hover {
-	color: green;
+color: green;
 }
-
 span {
-	font-style: italic;
+font-style: italic;
 }
-
 .boxBody{
-	background: #eaeaea;
-	border: 1px solid #000;
+background: #eaeaea;
+border: 1px solid #000;
 }
-
 .boxModel-margin {
-	border: 1px dotted #000; /* b5bdc8 */
-	background: #fdfbfb; /* Old browsers */
-	background: -moz-linear-gradient(top,  #fdfbfb 0%, #828c95 49%, #ebedee 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #fdfbfb 0%,#828c95 49%,#ebedee 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #fdfbfb 0%,#828c95 49%,#ebedee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfbfb', endColorstr='#ebedee',GradientType=0); /* IE6-9 */
+border: 1px dotted #000; /* b5bdc8 */
+background: #fdfbfb; /* Old browsers */
+background: -moz-linear-gradient(top,  #fdfbfb 0%, #828c95 49%, #ebedee 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #fdfbfb 0%,#828c95 49%,#ebedee 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #fdfbfb 0%,#828c95 49%,#ebedee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfbfb', endColorstr='#ebedee',GradientType=0); /* IE6-9 */
 }
-
 .boxModel-borda {
-	border: thick solid #000;
-	background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+border: thick solid #000;
+background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
 }
-
 .boxModel-padding{
-	border: thick solid #000;
-	background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+border: thick solid #000;
+background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
 }
-
 .boxModel-content p{
-	border: 1px dotted #000;
-	background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+border: 1px dotted #000;
+background: linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
 }
-
 .boxModel-margin:hover {
-	background: linear-gradient(90deg, #b5bdc8 0%,#828c95 100% );
+background: linear-gradient(90deg, #b5bdc8 0%,#828c95 100% );
 }
-
 .boxModel-borda:hover {
-	background: #00ff;
+background: #00ff;
 }
-
 .boxModel-padding:hover {
-	background: #33dd66;
+background: #33dd66;
 }
-
 .boxModel-content > p:hover {
-	background: #ff0000;
+background: #ff0000;
 }

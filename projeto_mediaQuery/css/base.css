@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* Folha de estilo base para mediaQuery */
+body {
+    padding: 0;
+    margin: 0;
+}

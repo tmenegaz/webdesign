@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* Folha de estilo skin para mediaQuery */
+/* cores: #B0C4DE #00BFFF #87CEEB #ADD8E6 */
+body {
+    font-family: DejaVu Serif;
+    font-size: 100%;
+}
+
+p {
+    color: #fff;
+    background: #000;
+}
+
+@media only screen and (min-width: 490px) {
+    p {
+        color: red;
+        background: #ccc;
+    }
+}

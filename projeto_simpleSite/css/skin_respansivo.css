@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* Folha de estilo skin para respansivo */
+/* cores: #B0C4DE #00BFFF #87CEEB #ADD8E6 */
+body {
+    font-family: DejaVu Serif;
+    font-size: 100%;
+
+    background: #add8e6;
+}
+
+#properties {
+    background: #b0c4de;
+}
+
+#properties > div h1 {
+    background: #00bfff;
+}
+
+@media only screen and (min-width: 490px) {
+    p {
+        color: red;
+        background: #87ceeb;
+    }
+}

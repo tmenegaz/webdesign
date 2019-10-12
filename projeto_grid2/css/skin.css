@@ -1,0 +1,41 @@
+body {
+    font-size: 100%;
+}
+/* grid principal */
+.container {
+    background: #c6c6c6;
+}
+
+.aside {
+    background: red;
+}
+
+.top {
+    background: yellow;
+}
+
+.nav {
+    background: green;
+}
+
+.main {
+    background: #fff;
+}
+
+.footer {
+    background: black;
+}
+
+/* grid aside filters */
+.top-logo {
+    background: brown;
+}
+.search {
+    background: yellow;
+}
+.filter-price {
+    background: white;
+}
+.filter-item {
+    background: white;
+}

@@ -3,7 +3,7 @@
 /* cores: #B0C4DE #00BFFF #87CEEB #ADD8E6 */
 body {
     font-family: DejaVu Serif;
-    font-size: 1em;
+    font-size: 100%;
 
     background: #add8e6;
 }

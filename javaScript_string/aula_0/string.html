@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Strings literais</h1>
+		<p>Uma string em JavaScript são sequências de caracteres de 16 bits sem sinal.</p>
+		<button onclick="alert('String literal é um conjunto de caracteres entre aspas simples ou duplas\n \'Bom dia!\' \n \u0022Boa tarde!\u0022 ')">String literal</button>
+		<p>As strings são como arrays de caracteres, isto é, cada caracter é idenxado e são imutáveis.</p>
+		<textarea style="min-width: 550px; min-height: 60px; padding-top: 5px;">
+		var s = "hello!"; // Começa com um texto em letras minúsculas.
+		s.toUpperCase(); // Retorna "HELLO!" mas não altera s
+		s; // => "hello!": a string original não mudou
+		</textarea>
+		<p>Os valores primitivos de string são comparados como iguais se, e somente se, tiverem o mesmo comprimento e se o coracter em cada índice for o mesmo</p>
+		<form name="form" onsubmit="return compara(this)">
+			<input type="text" name="str1" id="str1">
+			<input type="text" name="str2" id="str2">
+			<button type="submit" id="comp">Comparar Strings</button>
+		</form>
+		<p>Resposta da comparação: <span id="resp"></span></p>
+		<script>
+			
+			var btn = document.querySelector('#comp');
+			var span = document.querySelector('#resp');
+			
+			function compara(form){
+				var str1 = document.form.str1.value;
+				var str2 = document.form.str2.value;
+				if (str1 == str2) {
+					span.textContent = 'Iguais';
+					
+				} else {
+					span.textContent = 'Diferentes';
+				}
+			}
+		</script>
+	</body>
+</html>

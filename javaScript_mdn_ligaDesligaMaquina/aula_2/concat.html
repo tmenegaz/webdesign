@@ -38,7 +38,7 @@
 			idade.textContent = "Você está ótima(o) com " + getIdade + " anos!";
 		}
 		function setPergunta() {
-			var ano = (2019 - getIdade)
+			var ano = (new Date().getFullYear() - getIdade)
 			var getResposta = prompt("O que acontecera em " + ano.toString());
 			resposta.textContent = 'Você disse: ' + getResposta;
 		}

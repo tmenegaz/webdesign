@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto</title>
+	<style>
+			p {
+				width: 755px;
+			}
+			textarea {
+				min-width: 550px; padding-top: 5px;
+		</style>
+</head>
+<body>
+	<h1>Objetos</h1>
+	<h2>Objetos literais</h2>
+	<textarea rows="19">
+var Pessoa = {
+	nome: 'Laiz',
+	snome: "Menegaz",
+	idade: 8,
+	endereco: {
+	    rua: "Barro Vermelho",
+	    numero: "345",
+	    complemento: 'apto. 2016',
+	    bairro: 'Rio Vermelho',
+	    cidade: 'Salvador',
+	    uf: 'BA',
+	    cep: '41940340',
+	},
+	telefone: {
+	    fixo: '7199999999',
+	    cel: '71988888888',
+	}
+};
+	</textarea>
+	<h2>Objeto com função construtora</h2>
+	<textarea rows="19">
+	var Pessoa = new String();
+	Pessoa.nome = 'Laiz';
+	Pessoa.snome = "Menegaz";
+	Pessoa.idade = '8';
+
+	Pessoa.endereco = new String();
+	Pessoa.endereco.rua = "Barro Vermelho";
+	Pessoa.endereco.numero = "345";
+	Pessoa.endereco.complemento = 'apto. 2016';
+	Pessoa.endereco.bairro = 'Rio Vermelho';
+	Pessoa.endereco.cidade = 'Salvador';
+	Pessoa.endereco.uf = 'BA';
+	Pessoa.endereco.cep = '41940340';
+
+	Pessoa.telefone = new String();
+	Pessoa.telefone.fixo = '7199999999';
+	Pessoa.telefone.cel = '71988888888';
+	</textarea>
+
+	<h2>Object.create()</h2>
+	<textarea rows="19">
+var Pessoa = Object.create({
+	nome: 'Laiz',
+	snome: "Menegaz",
+	idade: 8,
+	endereco: {
+	    rua: "Barro Vermelho",
+	    numero: "345",
+	    complemento: 'apto. 2016',
+	    bairro: 'Rio Vermelho',
+	    cidade: 'Salvador',
+	    uf: 'BA',
+	    cep: '41940340',
+	},
+	telefone: {
+	    fixo: '7199999999',
+	    cel: '71988888888',
+	}
+});
+	</textarea>
+	
+
+</body>
+</html>

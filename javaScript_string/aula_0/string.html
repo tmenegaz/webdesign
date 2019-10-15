@@ -3,39 +3,153 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
+		<style>
+			p {
+				width: 755px;
+			}
+			textarea {
+				min-width: 550px; padding-top: 5px;
+		</style>
 	</head>
 	<body>
-		<h1>Strings literais</h1>
+		<h1>Strings</h1>
 		<p>Uma string em JavaScript são sequências de caracteres de 16 bits sem sinal.</p>
-		<button onclick="alert('String literal é um conjunto de caracteres entre aspas simples ou duplas\n \'Bom dia!\' \n \u0022Boa tarde!\u0022 ')">String literal</button>
+		<button id="string" onclick="alert('String literal é um conjunto de caracteres entre aspas simples ou duplas\n \'Bom dia!\' \n \u0022Boa tarde!\u0022 ')">String literal</button>
 		<p>As strings são como arrays de caracteres, isto é, cada caracter é idenxado e são imutáveis.</p>
-		<textarea style="min-width: 550px; min-height: 60px; padding-top: 5px;">
+		<textarea rows="4">
 		var s = "hello!"; // Começa com um texto em letras minúsculas.
 		s.toUpperCase(); // Retorna "HELLO!" mas não altera s
 		s; // => "hello!": a string original não mudou
 		</textarea>
 		<p>Os valores primitivos de string são comparados como iguais se, e somente se, tiverem o mesmo comprimento e se o coracter em cada índice for o mesmo</p>
-		<form name="form" onsubmit="return compara(this)">
-			<input type="text" name="str1" id="str1">
-			<input type="text" name="str2" id="str2">
-			<button type="submit" id="comp">Comparar Strings</button>
-		</form>
-		<p>Resposta da comparação: <span id="resp"></span></p>
-		<script>
-			
-			var btn = document.querySelector('#comp');
-			var span = document.querySelector('#resp');
-			
-			function compara(form){
-				var str1 = document.form.str1.value;
-				var str2 = document.form.str2.value;
-				if (str1 == str2) {
-					span.textContent = 'Iguais';
-					
-				} else {
-					span.textContent = 'Diferentes';
+		<div>
+			<label>
+				<input type="text" name="str1" id="str1" value="" placeholder="string 1"> == </label>
+				<input type="text" name="str2" id="str2" value="" placeholder="string 2">
+				<input name="submit" value="Comparar Strings" type="submit" id="submit">
+			</div>
+			<p>Resposta da comparação: <span id="resp"></span></p>
+			<p>As strings pode ser tratadas como arays somente para leitura e é possível acessar caracteres individuais de uma string usando colchetes ou o método charAt();
+			</p>
+			<textarea rows="9">
+		var a = 'casa';
+		<- undefined
+		a;
+		<- "casa"
+		a[0];
+		<- "c"
+		a.charAt(0);
+		<- "c"
+			</textarea>
+			<h1>Concatenar tipos diferentes</h1>
+			<p>É possível por meiodo operador de adição (<strong>+</strong>) adicionar uma string a um número</p>
+			<textarea rows="7">
+		'Rua' + 99;
+		<- "Rua99"
+		var mEuAno = '20' + '00';
+		<- "2000"
+		typeof mEuAno;
+		<- "string"
+			</textarea>
+			<h1>Cast</h1>
+			<p>Use Number() para transformar uma string em número e toString() para o contrário</p>
+			<textarea rows="8">
+		meuNumero = Number(mEuAno);
+		typeof meuNumero;
+		<- "number"
+
+		mEuAno = meuNumero.toString();
+		typeof mEuAno;
+		<- "string"
+			</textarea>
+			<h1>String como Objeto</h1>
+			<p>Tudo é um Objeto em JavaScript! Os valores de uma string podem ser também primitivos e nunca são mutáveis (os Objetos são mutáveis). Acontece que as Strings são convertidas em Objetos wrapper para herdar as propriedades de String</p>
+			<textarea rows="5">
+		s1 = "2 + 2";               // cria uma string primitiva
+		s2 = new String("2 + 2");   // cria um objeto de String
+		console.log(eval(s1));      // retorna o número 4
+		console.log(eval(s2));      // retorna a string "2 + 2"
+			</textarea>
+			<p>Mas também pode retornar para sua parte primitiva com valueOf()</p>
+			<textarea rows="2">
+		console.log(eval(s2.valueOf())); // retorna o número 4
+			</textarea>
+
+			<h1>Concatenação em contexto</h1>
+			<button id="apresenta">Apresente-se</button>
+	<p id="app"></p>
+	<p id="idade"></p>
+	<p id="resposta"></p>
+	<p id="tamanho"></p>
+	<p id="soma"></p>
+		
+			<script>
+		
+				var resp = document.querySelector('#resp');
+				var str1 = document.querySelector('#str1');
+				var str2 = document.querySelector('#str2');
+				var submit = document.querySelector('#submit');
+				str1.focus();
+				function compara(){
+					if (str1.value == str2.value && str1.value != '' && str2.value != '' ) {
+						resp.textContent = str1.value + ' == ' + str2.value;
+						str1.value = '';
+						str2.value = '';
+						str1.focus();
+					} else if (str1.value != str2.value && str1.value != '' && str2.value != '' ) {
+						resp.textContent = str1.value + ' != ' + str2.value;
+						str1.value = '';
+						str2.value = '';
+						str1.focus();
+					} else {
+						resp.textContent = 'digite as duas strings que serão comparadas';
+						str1.focus();
+					}
 				}
+
+				submit.addEventListener('click, compara');
+/*fim do 1º script*/
+
+		/*script 2: Concatenação em contexto*/
+
+		var btn = document.querySelector('#apresenta');
+		var p = document.querySelector('#app');
+		var idade = document.getElementById('idade');
+		var resposta = document.getElementById('resposta');
+		var tamanho = document.getElementById('tamanho');
+		var soma = document.getElementById('soma');
+		var getIdade = 0;
+
+		btn.onclick = function(){
+			var nome = prompt("Qual é o seu nome?");
+			p.textContent = 'Oi ' + nome + ", prazer em conhecê-la(o)!"
+			setIdade();
+			setPergunta();
+			metaData();
+			metaSoma();
+			btn.textContent = "limpar a tela";
+			if (btn.textContent === "limpar a tela"){
+				btn.onclick = limpa;
 			}
-		</script>
-	</body>
-</html>
+		}
+		function setIdade(){
+			getIdade = prompt("Qual é a sua idade?");
+			idade.textContent = "Você está ótima(o) com " + getIdade + " anos!";
+		}
+		function setPergunta() {
+			var ano = (new Date().getFullYear() - getIdade)
+			var getResposta = prompt("O que acontecera em " + ano.toString());
+			resposta.textContent = 'Você disse: ' + getResposta;
+		}
+		function metaData() {
+			tamanho.textContent = 'Obs1: Nas frases acima a 1ª tem ' + p.textContent.length + ' caracteres, a 2ª tem ' + idade.textContent.length + ' e a 3ª tem '+ resposta.textContent.length;
+		}
+		function metaSoma(){
+			soma.textContent = 'Obs2: Ao todo foram usados ' + (p.textContent.length+idade.textContent.length+resposta.textContent.length) + ' caracteres';
+		}
+		function limpa(){
+			document.location.reload();
+		}
+			</script>
+		</body>
+	</html>

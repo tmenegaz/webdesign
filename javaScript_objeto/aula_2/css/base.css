@@ -1,8 +1,16 @@
 html,
 body {
     margin: 10px;
+    box-sizing: border-box;
+
     font-family: Helvetica, DejaVu, Serif;
     font-size: 1em;
+}
+
+body {
+    height: 100vh;
+
+    background: #f1f1f1;
 }
 p {
     width: 755px;
@@ -12,43 +20,101 @@ hr {
     margin: 10px 0;
 }
 
-.form p {
-    background: #ccc;
-    width: 150px;
-    padding-top: 6px;
+#saida p {
+    width: 200px;
+    padding: 6px 0 0 5px;
     margin: 0;
-    font-size: 0.917rem;
+
+    font-size: .917rem;
+
+    border-top-color: #f1f1f1;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #f1f1f1;
+    border-right-color: #afafaf;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #afafaf;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: #afafaf;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #f1f1f1;
+    box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .24);
 }
 
 textarea {
-    min-width: 550px;
+    min-width: 360px;
     padding-top: 5px;
-    background: #eee;
+
+    border-top-color: #afafaf;
+    border-right-color: #f1f1f1;
+    border-bottom-color: #f1f1f1;
+    border-left-color: #afafaf;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .24);
 }
-#pessoa {
-    box-sizing: border-box;
+
+#conteudo {
+    display: grid;
+
+    column-gap: 5px;
+    grid-template-areas: "col-left-top col-center-top col-right-top"
+    "col-left col-center col-right";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
 }
+#conteudo > h2 {
+    grid-area: col-left-top;
+    justify-self: center;
+}
+
+#conteudo > textarea + h2 {
+    grid-area: col-center-top;
+    justify-self: center;
+}
+#conteudo > textarea + h2 + textarea + h2 {
+    grid-area: col-right-top;
+    justify-self: center;
+}
+#conteudo > textarea {
+    grid-area: col-left;
+}
+
+#conteudo > textarea + h2 + textarea {
+    grid-area: col-center;
+}
+
+#conteudo > textarea + h2 + textarea + h2 + textarea {
+    grid-area: col-right;
+}
+
 .form {
-    min-width: 755px;
     display: grid;
     width: 55%;
+    min-width: 755px;
 
     column-gap: 10px;
-    grid-template-areas: "label1 input1 leitura1"
-    "label2 input2 leitura2"
-    "label3 input3 leitura3"
-    "label4 input4 leitura4"
-    "label5 input5 leitura5"
-    "label6 input6 leitura6"
-    "label7 input7 leitura7"
-    "label8 input8 leitura8"
-    "label9 input9 leitura9"
-    "label10 input10 leitura10"
-    "label11 input11 leitura11"
-    "label12 input12 leitura12";
-    grid-template-columns: 1fr 3fr 1fr;
-    row-gap: 5px;
+    grid-template-areas: "label1 input1 input1 leitura1"
+    "label2 input2 input2 leitura2"
+    "label3 input3 input3 leitura3"
+    "label4 input4 input4 leitura4"
+    "label5 input5 input5 leitura5"
+    "label6 input6 input6 leitura6"
+    "label7 input7 input7 leitura7"
+    "label8 input8 input8 leitura8"
+    "label9 input9 input9 leitura9"
+    "label10 input10 input10 leitura10"
+    "label11 input11 input11 leitura11"
+    "label12 input12 input12 leitura12"
+    "hr1 hr1 hr1 hr1"
+    "btn1 btn2 btn3 btn4"
+    "hr2 hr2 hr2 hr2";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     /* grid-template-rows: 1vh 1vh; */
+    row-gap: 5px;
 }
 .form label {
     padding-top: 8px;
@@ -56,6 +122,10 @@ textarea {
 
 .form input {
     font-family: Helvetica;
+}
+
+#saida {
+    display: contents;
 }
 
 #nomeLabel {
@@ -176,4 +246,29 @@ textarea {
 }
 #leituraCel {
     grid-area: leitura12;
+}
+
+#hr1 {
+    grid-area: hr1;
+}
+
+#envia {
+    grid-area: btn1;
+    justify-content: space-between;
+}
+#consulta {
+    grid-area: btn2;
+    justify-content: space-between;
+}
+#edita {
+    grid-area: btn3;
+    justify-content: space-between;
+}
+#apaga {
+    grid-area: btn4;
+    justify-content: space-between;
+}
+
+#hr2 {
+    grid-area: hr2;
 }

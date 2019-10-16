@@ -3,168 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Objeto</title>
-	<style>
-		p {
-			width: 755px;
-		}
-
-		.form p {
-			width: 200px;
-		}
-
-		textarea {
-			min-width: 550px; padding-top: 5px;
-		}
-		#pessoa {
-			box-sizing: border-box;
-		}
-		.form {
-			width: 55%;
-			display: grid;
-			row-gap: 5px;
-			column-gap: 10px;
-			grid-template-areas: "label1 input1 leitura1"
-			"label2 input2 leitura2"
-			"label3 input3 leitura3"
-			"label4 input4 leitura4"
-			"label5 input5 leitura5"
-			"label6 input6 leitura6"
-			"label7 input7 leitura7"
-			"label8 input8 leitura8"
-			"label9 input9 leitura9"
-			"label10 input10 leitura10"
-			"label11 input11 leitura11"
-			"label12 input12 leitura12";
-
-			grid-template-columns: 1fr 2fr 1fr;
-			/* grid-template-rows: 1vh 1vh; */
-			
-		}
-		.form label {
-			padding-top: 8px;
-		}
-
-		#nomeLabel {
-			grid-area: label1;
-		}
-		#nomeInput {
-			grid-area: input1;
-		}
-		#leituraN {
-			grid-area: leitura1;
-		}
-
-		#snomeLabel {
-			grid-area: label2;
-		}
-		#snomeInput {
-			grid-area: input2;
-		}
-		#leituraSn {
-			grid-area: leitura2;
-		}
-
-		#idadeLabel {
-			grid-area: label3;
-		}
-		#idadeInput {
-			grid-area: input3;
-		}
-		#leituraIdade {
-			grid-area: leitura3;
-		}
-
-		#ruaLabel {
-			grid-area: label4;
-		}
-		#ruaInput {
-			grid-area: input4;
-		}
-		#leituraRua {
-			grid-area: leitura4;
-		}
-
-		#numeroLabel {
-			grid-area: label5;
-		}
-		#numeroInput {
-			grid-area: input5;
-		}
-		#leituraNumero {
-			grid-area: leitura5;
-		}
-
-		#comLabel {
-			grid-area: label6;
-		}
-		#comInput {
-			grid-area: input6;
-		}
-		#leituraCom {
-			grid-area: leitura6;
-		}
-
-		#bairroLabel {
-			grid-area: label7;
-		}
-		#bairroInput {
-			grid-area: input7;
-		}
-		#leituraBairro {
-			grid-area: leitura7;
-		}
-
-		#cidadeLabel {
-			grid-area: label8;
-		}
-		#cidadeInput {
-			grid-area: input8;
-		}
-		#leituraCidade {
-			grid-area: leitura8;
-		}
-
-		#ufLabel {
-			grid-area: label9;
-		}
-		#ufInput {
-			grid-area: input9;
-		}
-		#leituraUf {
-			grid-area: leitura9;
-		}
-
-		#cepLabel {
-			grid-area: label10;
-		}
-		#cepInput {
-			grid-area: input10;
-		}
-		#leituraCep {
-			grid-area: leitura10;
-		}
-
-		#fixoLabel {
-			grid-area: label11;
-		}
-		#fixoInput {
-			grid-area: input11;
-		}
-		#leituraFixo {
-			grid-area: leitura11;
-		}
-
-		#celLabel {
-			grid-area: label12;
-		}
-		#celInput {
-			grid-area: input12;
-		}
-		#leituraCel {
-			grid-area: leitura12;
-		}
-
-	</style>
+	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
 	<h1>Objetos</h1>
@@ -191,23 +30,23 @@ var pessoa = {
 	</textarea>
 	<h2>Objeto com função construtora</h2>
 	<textarea rows="19">
-	var pessoa = new String();
-	pessoa.nome = 'Laiz';
-	pessoa.snome = "Menegaz";
-	pessoa.idade = '8';
+var pessoa = new String();
+pessoa.nome = 'Laiz';
+pessoa.snome = "Menegaz";
+pessoa.idade = '8';
 
-	pessoa.endereco = new String();
-	pessoa.endereco.rua = "Barro Vermelho";
-	pessoa.endereco.numero = "345";
-	pessoa.endereco.complemento = 'apto. 2016';
-	pessoa.endereco.bairro = 'Rio Vermelho';
-	pessoa.endereco.cidade = 'Salvador';
-	pessoa.endereco.uf = 'BA';
-	pessoa.endereco.cep = '41940340';
+pessoa.endereco = new String();
+pessoa.endereco.rua = "Barro Vermelho";
+pessoa.endereco.numero = "345";
+pessoa.endereco.complemento = 'apto. 2016';
+pessoa.endereco.bairro = 'Rio Vermelho';
+pessoa.endereco.cidade = 'Salvador';
+pessoa.endereco.uf = 'BA';
+pessoa.endereco.cep = '41940340';
 
-	pessoa.telefone = new String();
-	pessoa.telefone.fixo = '7199999999';
-	pessoa.telefone.cel = '71988888888';
+pessoa.telefone = new String();
+pessoa.telefone.fixo = '7199999999';
+pessoa.telefone.cel = '71988888888';
 	</textarea>
 
 	<h2>Object.create()</h2>
@@ -235,7 +74,7 @@ var pessoa = Object.create({
 
 	<p>Chame as propriedades do objeto pessoa por meio do operador (<strong>.</strong>) e evoque com array associativo <strong>[</strong>""<strong>]</strong></p>
 	<div id="cadastro">
-		<h3>cadastro Pessoa</h3>
+		<h3>Cadastro</h3>
 		<div class="form">
 			<label id="nomeLabel" for="nomeInput">Nome</label>
 			<input id="nomeInput" type="text" name="nome">
@@ -275,8 +114,12 @@ var pessoa = Object.create({
 			<p id="leituraFixo"></p>
 			<p id="leituraCel"></p>
 		</div>
+		<hr>
 		<button id="enviar">Enviar</button>
 		<button id="consulta">Consultar</button>
+		<button id="edita">Editar</button>
+		<button id="apaga">Apagar</button>
+		<hr>
 	</div>
 	<div id="leitura">
 	</div>
@@ -284,11 +127,24 @@ var pessoa = Object.create({
 		var _nome = document.querySelector('#nomeInput');
 		var _leitura = document.querySelector('#leituraN');
 		
+		var _snome = document.querySelector('#snomeInput');
+		var _leituraSn = document.querySelector('#leituraSn');
+
+		var _idade = document.querySelector('#idadeInput');
+		var _leituraIdade = document.querySelector('#leituraIdade');
+
 		var btnEnviar = document.querySelector('#enviar');
 		var btnConsulta = document.querySelector('#consulta');
+		var btnEdita = document.querySelector('#edita');
+		var btnApaga = document.querySelector('#apaga');
 
+		btnEnviar.addEventListener('click', salva);
+		btnConsulta.addEventListener('click', le);
+		btnEdita.addEventListener('click', edita);
+		btnApaga.addEventListener('click', apaga);
+		
 		var pessoa = {
-			nome: '', /*'Laiz'*/
+			nome: '', /*'Tiago'*/
 			snome: '',
 			idade: '',
 			endereco: {
@@ -306,16 +162,34 @@ var pessoa = Object.create({
 			}
 		};
 
-		btnEnviar.addEventListener('click', salva);
-		btnConsulta.addEventListener('click', le);
 
 		function salva(){
 			pessoa.nome = _nome.value;
+			_nome.value = '';
+			pessoa.snome = _snome.value;
+			_snome.value = '';
+			pessoa.idade = _idade.value;
+			_idade.value = '';
+			_idade.placeholder = '';
 		}
 
 		function le(){
 			_leitura.textContent = pessoa["nome"];
-			_leitura.style.fontSize = ".9em";
+			_leituraSn.textContent = pessoa["snome"];
+			_idade.placeholder = pessoa["idade"];
+		}
+
+		function edita(){
+			_nome.value = pessoa["nome"];
+			_snome.value = pessoa["snome"];
+			_idade.value = pessoa["idade"];
+		}
+
+		function apaga(){
+			_nome.value = '';
+			_snome.value = '';
+			_idade.value = '';
+			location.reload();
 		}
 
 	</script>

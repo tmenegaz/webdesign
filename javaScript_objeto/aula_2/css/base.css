@@ -1,0 +1,179 @@
+html,
+body {
+    margin: 10px;
+    font-family: Helvetica, DejaVu, Serif;
+    font-size: 1em;
+}
+p {
+    width: 755px;
+}
+hr {
+    width: 755px;
+    margin: 10px 0;
+}
+
+.form p {
+    background: #ccc;
+    width: 150px;
+    padding-top: 6px;
+    margin: 0;
+    font-size: 0.917rem;
+}
+
+textarea {
+    min-width: 550px;
+    padding-top: 5px;
+    background: #eee;
+}
+#pessoa {
+    box-sizing: border-box;
+}
+.form {
+    min-width: 755px;
+    display: grid;
+    width: 55%;
+
+    column-gap: 10px;
+    grid-template-areas: "label1 input1 leitura1"
+    "label2 input2 leitura2"
+    "label3 input3 leitura3"
+    "label4 input4 leitura4"
+    "label5 input5 leitura5"
+    "label6 input6 leitura6"
+    "label7 input7 leitura7"
+    "label8 input8 leitura8"
+    "label9 input9 leitura9"
+    "label10 input10 leitura10"
+    "label11 input11 leitura11"
+    "label12 input12 leitura12";
+    grid-template-columns: 1fr 3fr 1fr;
+    row-gap: 5px;
+    /* grid-template-rows: 1vh 1vh; */
+}
+.form label {
+    padding-top: 8px;
+}
+
+.form input {
+    font-family: Helvetica;
+}
+
+#nomeLabel {
+    grid-area: label1;
+}
+#nomeInput {
+    grid-area: input1;
+}
+#leituraN {
+    grid-area: leitura1;
+}
+
+#snomeLabel {
+    grid-area: label2;
+}
+#snomeInput {
+    grid-area: input2;
+}
+#leituraSn {
+    grid-area: leitura2;
+}
+
+#idadeLabel {
+    grid-area: label3;
+}
+#idadeInput {
+    grid-area: input3;
+}
+#leituraIdade {
+    grid-area: leitura3;
+}
+
+#ruaLabel {
+    grid-area: label4;
+}
+#ruaInput {
+    grid-area: input4;
+}
+#leituraRua {
+    grid-area: leitura4;
+}
+
+#numeroLabel {
+    grid-area: label5;
+}
+#numeroInput {
+    grid-area: input5;
+}
+#leituraNumero {
+    grid-area: leitura5;
+}
+
+#comLabel {
+    grid-area: label6;
+}
+#comInput {
+    grid-area: input6;
+}
+#leituraCom {
+    grid-area: leitura6;
+}
+
+#bairroLabel {
+    grid-area: label7;
+}
+#bairroInput {
+    grid-area: input7;
+}
+#leituraBairro {
+    grid-area: leitura7;
+}
+
+#cidadeLabel {
+    grid-area: label8;
+}
+#cidadeInput {
+    grid-area: input8;
+}
+#leituraCidade {
+    grid-area: leitura8;
+}
+
+#ufLabel {
+    grid-area: label9;
+}
+#ufInput {
+    grid-area: input9;
+}
+#leituraUf {
+    grid-area: leitura9;
+}
+
+#cepLabel {
+    grid-area: label10;
+}
+#cepInput {
+    grid-area: input10;
+}
+#leituraCep {
+    grid-area: leitura10;
+}
+
+#fixoLabel {
+    grid-area: label11;
+}
+#fixoInput {
+    grid-area: input11;
+}
+#leituraFixo {
+    grid-area: leitura11;
+}
+
+#celLabel {
+    grid-area: label12;
+}
+#celInput {
+    grid-area: input12;
+}
+#leituraCel {
+    grid-area: leitura12;
+}

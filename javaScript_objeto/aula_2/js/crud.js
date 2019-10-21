@@ -14,11 +14,12 @@ btnConsulta.addEventListener('click', le);
 btnEdita.addEventListener('click', edita);
 btnApaga.addEventListener('click', apaga);
 
+// objeto pessoa com suas propriedades
 var pessoa = {
 	nome: '',
 	snome: '',
 	idade: '',
-	endereco: {
+	endereco: { /* ajustar para utilização de prototype */
 		rua: "",
 		numero: "",
 		complemento: '',
@@ -27,11 +28,12 @@ var pessoa = {
 		uf: '',
 		cep: '',
 	},
-	telefone: {
+	telefone: { /* ajustar para utilização de prototype */
 		fixo: '',
 		cel: '',
 	}
 };
+// ajustar para método da função construtura Pessoa
 function salva(){
 	pessoa.nome = _nome.value;
 	_nome.value = '';

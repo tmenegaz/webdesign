@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto</title>
+	<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+	<h1>Objetos</h1>
+	<div id="conteudo">
+		<h2>Objetos literais</h2>
+		<textarea rows="19">
+	var pessoa = {
+		nome: 'Laiz',
+		snome: "Menegaz",
+		idade: 8,
+		endereco: {
+		    rua: "Barro Vermelho",
+		    numero: "345",
+		    complemento: 'apto. 2016',
+		    bairro: 'Rio Vermelho',
+		    cidade: 'Salvador',
+		    uf: 'BA',
+		    cep: '41940340',
+		},
+		telefone: {
+		    fixo: '7199999999',
+		    cel: '71988888888',
+		}
+	};
+		</textarea>
+		<h2>Objeto com função construtora</h2>
+		<textarea rows="19">
+	var pessoa = new String();
+	pessoa.nome = 'Laiz';
+	pessoa.snome = "Menegaz";
+	pessoa.idade = '8';
+
+	pessoa.endereco = new String();
+	pessoa.endereco.rua = "Barro Vermelho";
+	pessoa.endereco.numero = "345";
+	pessoa.endereco.complemento = 'apto. 2016';
+	pessoa.endereco.bairro = 'Rio Vermelho';
+	pessoa.endereco.cidade = 'Salvador';
+	pessoa.endereco.uf = 'BA';
+	pessoa.endereco.cep = '41940340';
+
+	pessoa.telefone = new String();
+	pessoa.telefone.fixo = '7199999999';
+	pessoa.telefone.cel = '71988888888';
+		</textarea>
+
+		<h2>Object.create()</h2>
+		<textarea rows="19">
+	var pessoa = Object.create({
+		nome: 'Laiz',
+		snome: "Menegaz",
+		idade: 8,
+		endereco: {
+		    rua: "Barro Vermelho",
+		    numero: "345",
+		    complemento: 'apto. 2016',
+		    bairro: 'Rio Vermelho',
+		    cidade: 'Salvador',
+		    uf: 'BA',
+		    cep: '41940340',
+		},
+		telefone: {
+		    fixo: '7199999999',
+		    cel: '71988888888',
+		}
+	});
+		</textarea>
+	</div>
+		<h2>Consulta e configuração de propriedade</h2>
+
+		<p>Chame as propriedades do objeto pessoa por meio do operador (<strong>.</strong>) e evoque com array associativo <strong>[</strong>""<strong>]</strong></p>
+		<h3>Cadastro</h3>
+			<form class="form" action="">
+				<label id="nomeLabel" for="nomeInput">Nome</label>
+				<input id="nomeInput" type="text" name="nome">
+				<label id="snomeLabel" for="snomeInput">Sobrenome</label>
+				<input id="snomeInput" type="text" name="snome">
+				<label id="idadeLabel" for="idadeInput">Idade</label>
+				<input id="idadeInput" type="text" name="idade">
+				<label id="ruaLabel" for="ruaInput">Rua</label>
+				<input id="ruaInput" type="text" name="rua">
+				<label id="numeroLabel" for="numeroInput">Número</label>
+				<input id="numeroInput" type="text" name="numero">
+				<label id="comLabel" for="comInput">Complemento</label>
+				<input id="comInput" type="text" name="complemento">
+				<label id="bairroLabel" for="bairroInput">Bairro</label>
+				<input id="bairroInput" type="text" name="bairro">
+				<label id="cidadeLabel" for="cidadeInput">cidade</label>
+				<input id="cidadeInput" type="text" name="cidade">
+				<label id="ufLabel" for="ufInput">UF</label>
+				<input id="ufInput" type="text" name="uf">
+				<label id="cepLabel" for="cepInput">CEP</label>
+				<input id="cepInput" type="text" name="cep">
+				<label id="fixoLabel" for="fixoInput">Telefone fixo</label>
+				<input id="fixoInput" type="text" name="fixo">
+				<label id="celLabel" for="celInput">Telefone celular</label>
+				<input id="celInput" type="text" name="cel">
+				<hr id="hr1">
+				<!-- type="button" é importante para que o script tenha total controle do comportamento do botão -->
+				<button id="envia" type="button">Enviar</button> 
+				<button id="consulta" type="button">Consultar</button>
+				<button id="edita" type="button">Editar</button>
+				<button id="apaga" type="button">Apagar</button>
+				<hr id="hr2">	
+			<!-- saidas -->
+			<div id="saida">
+			<p id="leituraN"></p>
+			<p id="leituraSn"></p>
+			<p id="leituraIdade"></p>
+			<p id="leituraRua"></p>
+			<p id="leituraNumero"></p>
+			<p id="leituraCom"></p>
+			<p id="leituraBairro"></p>
+			<p id="leituraCidade"></p>
+			<p id="leituraUf"></p>
+			<p id="leituraCep"></p>
+			<p id="leituraFixo"></p>
+			<p id="leituraCel"></p>
+			</div>			
+			</form>
+	<script src="js/crud.js"></script>
+</body>
+</html>

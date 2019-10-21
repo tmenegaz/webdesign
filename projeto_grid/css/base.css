@@ -22,7 +22,7 @@ body {
     /*     height: 90px; */
     padding: 10px;
 
-    grid-area: top;
+    grid-area: footer;
     /* atalho */
     /* grid-column: 1/4; */
 
@@ -34,7 +34,7 @@ body {
     /*     height: 90px; */
     padding: 10px;
 
-    grid-area: nav;
+    grid-area: side;
     /* modo verboso */
     /* grid-column-end: 4;
     grid-column-start: 1; */
@@ -43,7 +43,7 @@ body {
     /*     height: 90px; */
     padding: 10px;
 
-    grid-area: side;
+    grid-area: nav;
     /* modo verboso */
     /* grid-column-end: 2;
     grid-column-start: 1; */
@@ -70,7 +70,7 @@ body {
     height: 90px;
     padding: 10px;
 
-    grid-area: footer;
+    grid-area: top;
     /* modo verboso */
     /* grid-column-end: 4;
     grid-column-start: 1; */
@@ -104,18 +104,19 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     /* grid-template-rows: 10px 10px 10px; */
     /* para content */
-/*     justify-content: center; */
+    /*     justify-content: center; */
     /* para os itens */
-/*     justify-items: center; */
+    /*     justify-items: center; */
 }
 #properties > div {
-    width: 50%;
-    height: 50%;
+    width: 10%;
+    height: 10%;
     /* generico */
+
     align-self: center;
     justify-self: center;
 }
 .center {
-/*     align-self: center; */
-/*     justify-self: first baseline; */
+    align-self: center;
+    justify-self: first baseline;
 }

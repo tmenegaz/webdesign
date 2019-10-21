@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* Folha de estilo base para grid */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: grid;
+
+    grid-gap: 5px;
+    grid-template-areas: "img-col-left img-col-center img-col-right"
+    "txt-col-left txt-col-center txt-col-right";
+    /* para obter um espaço vazio use o . */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#img-col-left {
+    /*     height: 90px; */
+    padding: 10px;
+
+    grid-area: img-col-left;
+    /* atalho */
+    /* grid-column: 1/4; */
+
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+#img-col-center {
+    /*     height: 90px; */
+    padding: 10px;
+
+    grid-area: img-col-center;
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+#img-col-right {
+    /*     height: 90px; */
+    padding: 10px;
+
+    grid-area: img-col-right;
+    /* modo verboso */
+    /* grid-column-end: 2;
+    grid-column-start: 1; */
+}
+
+#txt-col-left {
+    /*     height: 90px; */
+    padding: 10px;
+
+    grid-area: txt-col-left;
+    /* atalho */
+    /* grid-column: 1/4; */
+
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+#txt-col-center {
+    /*     height: 90px; */
+    padding: 10px;
+
+    grid-area: txt-col-center;
+    /* modo verboso */
+    /* grid-column-end: 4;
+    grid-column-start: 1; */
+}
+#txt-col-right {
+    /*     height: 90px; */
+    padding: 10px;
+
+    grid-area: txt-col-right;
+    /* modo verboso */
+    /* grid-column-end: 2;
+    grid-column-start: 1; */
+}

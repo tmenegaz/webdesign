@@ -7,15 +7,16 @@ body {
     box-sizing: border-box;
 }
 
-#container {
+.main-page {
     display: grid;
+    padding: 20px;
 
     grid-gap: 5px;
     grid-template-areas: "img-col-left img-col-center img-col-right"
     "txt-col-left txt-col-center txt-col-right";
     /* para obter um espaço vazio use o . */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
 }
 
 #img-col-left {

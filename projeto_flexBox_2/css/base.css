@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* Folha de estilo base para flexbox 2 */
+body {
+    padding: 0;
+    margin: 0;
+    margin-left: 13px;
+}
+
+#container {
+    display: flex;
+    width: 980px;
+    height: 480px;
+
+    align-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.item {
+    width: 215px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.item img {
+    width: 200px;
+    height: 90px;
+}
+
+.item h1 {
+    position: absolute;
+    top: 96px;
+
+    width: 228px;
+}
+
+.item:nth-child(1) {
+    /* flex-grow: 1; */
+    order: 4;
+}
+.item:nth-child(2) {
+    order: 1;
+}
+.item:nth-child(3) {
+    order: 3;
+}
+.item:nth-child(4) {
+    order: 2;
+}

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* folha de estilo base-atv para o projeto grid4 */
+
+.main-page {
+    padding: 10px;
+}
+
+.atv-item {
+    list-style: none;
+}
+
+.main-page p {
+    line-height: 1.8rem;
+
+    text-align: justify;
+}

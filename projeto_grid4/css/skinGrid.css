@@ -23,7 +23,7 @@ body {
 }
 
 .main-page {
-    background: red;
+    background: #f4e6e6;
 }
 
 .aside-page {
@@ -31,5 +31,6 @@ body {
 }
 
 .footer-page {
+    color: #fff;
     background: black;
 }

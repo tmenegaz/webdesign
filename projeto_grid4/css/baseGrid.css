@@ -42,5 +42,16 @@ body {
 }
 
 .footer-page {
+    padding: 15px;
+
     grid-area: footer;
+}
+
+.footer-page a {
+    display: block;
+    padding-top: 5px;
+}
+
+.footer-page:last-child {
+    padding-bottom: 30px;
 }

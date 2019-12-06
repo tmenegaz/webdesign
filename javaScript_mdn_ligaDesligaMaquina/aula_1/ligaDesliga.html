@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Liga/Desliga</title>
+	</head>
+	<body>
+		<button>Iniciar máquina</button>
+		<p>A máquina está parada</p>
+		
+		<script>
+			var btn = document.querySelector('button');
+			var txt = document.querySelector('p');
+			
+			btn.addEventListener('click', updateBtn);
+			
+			function updateBtn(){
+				if (btn.textContent === 'Iniciar máquina') {
+					btn.textContent = 'Parar máquina'
+					txt.textContent = 'A máquina iniciou';
+					btn.style.color = 'red';
+					txt.style.color = 'green';
+				} else {
+					btn.textContent = 'Iniciar máquina';
+					btn.style.color = 'green';
+					txt.style.color = 'red';
+					txt.textContent = 'A máquina está parada';
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+/* para ajustar as dimensões do viewport */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* grid principal */
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-gap: 2px;
+    grid-template-areas: ". . . ."
+    ". aside top ."
+    ". aside nav ."
+    ". aside main ."
+    ". aside footer .";
+    grid-template-columns: .0001fr .90fr 3.80fr .0001fr;
+    grid-template-rows: .001vh 9.50vh 9.50vh 69.90vh 9.50vh;
+}
+
+.aside {
+    width: 100%;
+    height: 100%;
+    /* lugar para identidade e sistema de filtros e busca */
+
+    grid-area: aside;
+}
+.top {
+    /* navegação recursiva, carrinho, ligin e admin */
+    grid-area: top;
+}
+
+.nav {
+    /* menu de navegação */
+    grid-area: nav;
+}
+
+.main {
+    /* grade com 4 colunas e linhas infinitas em blocos com conteúdo para venda */
+    grid-area: main;
+}
+
+.footer {
+    /* rodapé da página com linkes e informações extras para api, contrato e contatos */
+    grid-area: footer;
+}
+
+/* grid interno de aside */
+.aside-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-gap: 2px;
+    grid-template-areas: "top-logo"
+    "search"
+    "filter-price"
+    "filter-item";
+    grid-template-columns: .99fr;
+    grid-template-rows: 19vh 9.5vh 34.9vh 34.9vh;
+}
+.top-logo {
+    grid-area: top-logo;
+}
+.search {
+    grid-area: search;
+}
+.filter-price {
+    grid-area: filter-price;
+}
+.filter-item {
+    grid-area: filter-item;
+}

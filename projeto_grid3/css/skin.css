@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* Folha de estilo skin para   */
+/* cores: #84fab0 #EB0B6C #388956 #8fd3f4 */
+body {
+    font-family: DejaVu, Serif;
+    font-size: 100%;
+
+    background: #eb0b6c;
+}
+.main-page {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}

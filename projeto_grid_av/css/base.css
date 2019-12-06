@@ -15,8 +15,8 @@ body {
     "nav nav nav"
     "side main aside"
     "footer footer footer"; /* para obter um espaço vazio use o . */
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 16.6vh 16.6vh 70vh;
+    grid-template-columns: .8fr 4fr .8fr;
+    grid-template-rows: 14.6vh 14.6vh 50vh;
 }
 .top-page {
     /*     height: 90px; */
@@ -31,7 +31,7 @@ body {
     grid-column-start: 1; */
 }
 .nav-page {
-    /*     height: 90px; */
+    /* height: 40px; */
     padding: 10px;
 
     grid-area: nav;
@@ -87,36 +87,4 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-#properties {
-    display: grid;
-    width: 100%;
-    height: 81.5%;
-    /* para os itens */
-    /* align-items: center; */
-    /* para content */
-    /* align-content: center; */
-
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-columns: 10px 10px 10px; */
-    grid-template-rows: 1fr 1fr 1fr;
-    /* grid-template-rows: 10px 10px 10px; */
-    /* para content */
-    /*     justify-content: center; */
-    /* para os itens */
-    /*     justify-items: center; */
-}
-#properties > div {
-    width: 10%;
-    height: 10%;
-    /* generico */
-
-    align-self: center;
-    justify-self: center;
-}
-.center {
-    align-self: center;
-    justify-self: first baseline;
 }

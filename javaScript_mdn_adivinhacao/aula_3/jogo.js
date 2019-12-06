@@ -38,7 +38,7 @@ contagemPalpites++;
 campoPalpite.value = '';
 campoPalpite.focus();
 }
-conferirPalpite();
+// conferirPalpite();
 envioPalpite.addEventListener('click', conferirPalpite);
 function configFimDeJogo() {
 campoPalpite.disabled = true;

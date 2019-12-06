@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* folha de estilo skinGrid para o projeto grid4 */
+
+
+body {
+    font-family: DejaVu, Serif;
+    font-size: 100%;
+
+    background: #c2c2c2;
+}
+
+/* itens do layout */
+.top-page {
+    background: yellow;
+}
+
+.nav-page {
+    background: #c8c8;
+}
+
+.side-page {
+    background: green;
+}
+
+.main-page {
+    background: #f4e6e6;
+}
+
+.aside-page {
+    background: white;
+}
+
+.footer-page {
+    color: #fff;
+    background: black;
+}

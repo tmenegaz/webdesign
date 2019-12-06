@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* folha de estilo baseGrid para o projeto grid4 */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* layout */
+#container {
+    display: grid;
+
+    grid-template-areas: "top top top"
+    "nav nav nav"
+    "side main aside"
+    "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 16.6vh 16.6vh 70vh;
+}
+
+/* itens do layout */
+.top-page {
+    grid-area: top;
+}
+
+.nav-page {
+    grid-area: nav;
+}
+
+.side-page {
+    grid-area: side;
+}
+
+.main-page {
+    grid-area: main;
+}
+
+.aside-page {
+    grid-area: aside;
+}
+
+.footer-page {
+    padding: 15px;
+
+    grid-area: footer;
+}
+
+.footer-page a {
+    display: block;
+    padding-top: 5px;
+}
+
+.footer-page:last-child {
+    padding-bottom: 30px;
+}

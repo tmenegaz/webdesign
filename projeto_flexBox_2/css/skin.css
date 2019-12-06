@@ -4,14 +4,10 @@
 body {
     font-family: DejaVu, Serif;
     font-size: 1em;
+
+    background: #b0c4de;
 }
 
-#content {
-    background: #add8e6;
-}
-.item {
-    color: #fff;
-    border-radius: 5% 10px;
-    background: #b0c4de;
-    box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .24);
+#container {
+    background: #00bfff;
 }

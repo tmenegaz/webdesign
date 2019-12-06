@@ -12,8 +12,11 @@ body {
     background: yellow;
 }
 .nav-page {
-    color: #fff;
-    background: blue;
+    /* color: #fff; */
+    background: yellow;
+}
+.item a {
+    color: #000;
 }
 .side-page {
     color: #fff;
@@ -31,12 +34,4 @@ body {
 }
 .footer-page a {
     color: #fff;
-}
-
-#properties {
-    background: black;
-}
-
-#properties > div {
-    background: yellow;
 }

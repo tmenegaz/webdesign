@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* folha de estilo skinFlex para o projeto grid4 */
+
+.item a {
+    color: #000;
+
+    hover: #fff;
+}
+
+.item a:hover {
+    color: #fff;
+}

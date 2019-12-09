@@ -2,11 +2,26 @@
 /* folha de estilo skinFlex para o projeto grid4 */
 
 .item a {
-    color: #000;
+    text-decoration: none;
 
-    hover: #fff;
+    color: #000;
+}
+
+.item a:active {
+    color: #fff;
 }
 
 .item a:hover {
+    color: #fff;
+}
+
+
+.item-inner a {
+    text-decoration: none;
+
+    color: #000;
+}
+
+.item-inner a:hover {
     color: #fff;
 }

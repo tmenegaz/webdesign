@@ -6,31 +6,26 @@ body {
     font-family: DejaVu, Serif;
     font-size: 100%;
 
-    background: #c2c2c2;
+    background: rgba(242, 214, 243,19509810760241597) 100%;
 }
 
 /* itens do layout */
 .top-page {
-    background: yellow;
+    background: rgb(193, 144, 220);
 }
 
 .nav-page {
-    background: #c8c8;
+    border-bottom: solid 1px #f79bf5;
+    background: linear-gradient(180deg, rgba(193, 144, 220) 0%, rgba(255, 185, 254,1) 100%, rgba(255,234,234,10) 100%);
 }
 
-.side-page {
-    background: green;
-}
-
-.main-page {
-    background: #f4e6e6;
-}
-
+.side-page,
+.main-page,
 .aside-page {
-    background: white;
+    border-bottom: solid 1px #fbcafa;
+    background: linear-gradient(180deg, rgba(255, 185, 254,1) 0%, rgba(242, 214, 243,19509810760241597) 100%, rgba(255, 255, 255,34075637090773814) 100%);
 }
 
 .footer-page {
-    color: #fff;
-    background: black;
+    background: rgba(242, 214, 243,19509810760241597) 100%;
 }

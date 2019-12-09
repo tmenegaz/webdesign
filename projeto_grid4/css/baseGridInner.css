@@ -12,11 +12,11 @@ body {
 #container {
     display: grid;
 
-    grid-template-areas: "top top top"
-    "nav nav nav"
-    "side main aside"
-    "footer footer footer";
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "top top"
+    "nav nav"
+    "side main"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: auto auto auto auto;
 }
 
@@ -41,10 +41,6 @@ body {
     min-height: 40vh;
 
     grid-area: main;
-}
-
-.aside-page {
-    grid-area: aside;
 }
 
 .footer-page {

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* folha de estilo baseFlex para o projeto grid4 */
+
+#navegacao-side {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    flex-flow: column;
+    justify-content: center;
+}
+.item-inner {
+    width: 100%;
+    padding: 15px 0 0 15px;
+
+    text-align: start;
+
+    flex-basis: auto;
+}
+
+.item-inner:nth-child(1) {
+    order: 1;
+}
+
+.item-inner:nth-child(2) {
+    order: 2;
+}
+
+.item-inner:nth-child(3) {
+    order: 3;
+}
+
+.item-inner:nth-child(4) {
+    order: 4;
+}

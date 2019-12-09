@@ -1,0 +1,6 @@
+1 elaborar 3 páginas com layout de duas colunas 2,0
+2 uma lista de navegação lateral com os itens dispostos verticalmente 2,0
+3 aproveitamento do código 2,0
+4 linques de navegação principal para página 1, 2, 3 e o home funcinando 2,0 (0,5 para cada linque)
+5 O top, nav e footer são iguais ao da home para todas as páginas 1,0 (0,33 cada parte)
+6 Usar css externo. 1,0
